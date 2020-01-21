@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="mytools" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/logo.png" height="142"/>
+  <img alt="ostch logo" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/logo.png" height="142"/>
 </p>
 
 ### Our Features
@@ -24,7 +24,7 @@
 
 ### Screenshot
 <p align="center">
-  <img alt="mytools" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/ss1.jpg"/>
-  <img alt="mytools" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/ss2.jpg"/>
-  <img alt="mytools" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/ss3.jpg"/>
+  <img alt="screenshot1" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/ss1.jpg"/>
+  <img alt="screenshot2" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/ss2.jpg"/>
+  <img alt="screenshot3" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/ss3.jpg"/>
 </p>
