@@ -25,6 +25,9 @@ const config = {
   },
   spam: {
     BASE_URL: 'https://core.ktbs.io/v2/user/registration/otp/'
+  },
+  tokped: {
+    BASE_URL: 'http://kjx.herokuapp.com/api/tokopedia?id='
   }
 }
 

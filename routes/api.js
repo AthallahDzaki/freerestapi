@@ -1,5 +1,5 @@
-var express = require('express');
-var router  = express.Router();
+var express = require('express')
+var router  = express.Router()
 
 var {
   Main,
@@ -21,6 +21,30 @@ var { Movie }    = require('./../config/movie')
 var { FakerGen } = require('./../config/fakeName')
 var { Hilih }    = require('./../config/hilih')
 var { Spam }     = require('./../config/spam_wa')
+var { Check }    = require('./../config/tokped')
+
+router.get('/tokped', (req, res, next) => {
+  const no = req.query.no
+  if (!no) {
+    res.send({
+      code: 200,
+      message: 'Pliese input parameter url.'
+    })
+  } else {
+    const main = new Check()
+    main.tokped(no, (error, {code, message, result} = {} ) => {
+      if (!error) {
+        res.send({
+          code,
+          message,
+          result
+        })
+      } else {
+        res.send({ error })
+      }
+    })
+  }
+})
 
 router.get('/spam', (req, res, next) => {
   const main = new Spam()
@@ -430,4 +454,4 @@ router.get('/iplookup', (req, res, next) => {
     }
   })
 
-module.exports = router;
+module.exports = router

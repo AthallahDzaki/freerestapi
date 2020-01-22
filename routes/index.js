@@ -1,8 +1,11 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
 var fs = require('fs')
 require('dotenv').config()
 
+  router.get('/doc/tokped', (req, res, next) => {
+    res.render('tokped', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+  })
   router.get('/doc/spam_wa', (req, res, next) => {
     res.render('spam_wa', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
@@ -53,7 +56,7 @@ require('dotenv').config()
      const view  = 'abc\n'
      const rview = view[Math.floor(Math.random() * view.length)]
 /*     fs.appendFile('./../view.txt', rview, function(err) {
-       if (err) throw err;
+       if (err) throw err
        console.log(' [√] success saved on view.txt')
      })*/
      res.render('index', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
@@ -68,4 +71,4 @@ require('dotenv').config()
     }))
   })
 
-module.exports = router;
+module.exports = router

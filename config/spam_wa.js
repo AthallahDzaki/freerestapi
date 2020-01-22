@@ -14,7 +14,7 @@ class Spam {
           callback({
             code: 400,
             message: 'Api key not valid, pliese try again later.',
-            cl: 'sha?|anjaySpam'
+            cl: `sha?|${process.env.KEY_SPAM}`
           }, undefined)
         } else {
           callback(undefined, {
