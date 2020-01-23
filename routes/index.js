@@ -3,6 +3,9 @@ var router = express.Router()
 var fs = require('fs')
 require('dotenv').config()
 
+  router.get('/doc/movie', (req, res, next) => {
+    res.render('movie', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+  })
   router.get('/doc/tokped', (req, res, next) => {
     res.render('tokped', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
