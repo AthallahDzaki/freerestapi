@@ -145,7 +145,6 @@ class Base64 {
       }]
     })
   }
-}
 
 class Base32 {
   enc(text, callback) {
@@ -170,7 +169,6 @@ class Base32 {
       }]
     })
   }
-}
 
 class getIp{
   main(callback){
