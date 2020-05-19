@@ -10,18 +10,32 @@ var {
   Base32,
   getIp,
   Gdrive,
-  urlShort
+  urlShort,
+  c19
 } = require('./../config/utils')
 
 var {
   HashGen
 } = require('./../config/hash')
 
-var { Movie }    = require('./../config/movie')
+// var { Movie }    = require('./../config/movie')
 var { FakerGen } = require('./../config/fakeName')
 var { Hilih }    = require('./../config/hilih')
 var { Spam }     = require('./../config/spam_wa')
 var { Check }    = require('./../config/tokped')
+
+router.get('/corona', (req, res, next) => {
+  const main = new c19()
+  main.indo((error, {negara, positif, sembuh, meninggal, dirawat} = {}) => {
+    res.send({
+      negara,
+      positif,
+      sembuh,
+      meninggal,
+      dirawat
+    })
+  })
+})
 
 router.get('/tokped', (req, res, next) => {
   const no = req.query.no
@@ -408,7 +422,8 @@ router.get('/iplookup', (req, res, next) => {
     }
   })
 
-  router.get('/movie', (req, res, next) => {
+  /* -- disable api
+   router.get('/movie', (req, res, next) => {
     const main = new Movie()
     const q = req.query.q
     if (!q) {
@@ -434,7 +449,7 @@ router.get('/iplookup', (req, res, next) => {
 
   router.get('/cur_ig', (req, res, next) => {
     res.json({code: 200, message: 'comming soon!.'})
-  })
+  }) */
 
   router.get('/hilih', (req, res, next) => {
     const kata = req.query.kata

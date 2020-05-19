@@ -3,8 +3,12 @@ var router = express.Router()
 var fs = require('fs')
 require('dotenv').config()
 
+  /* -- disable
   router.get('/doc/movie', (req, res, next) => {
     res.render('movie', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+  }) */
+  router.get('/doc/covid19', (req, res, next) => {
+    res.render('cv19', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
   router.get('/doc/tokped', (req, res, next) => {
     res.render('tokped', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
@@ -54,7 +58,9 @@ require('dotenv').config()
   router.get('/', (req, res, next) => {
     res.redirect('/beranda')
   })
-
+  router.get('/about', (req, res, next) => {
+    res.render('about', {host: process.env.S_HOST, title: "about | Online Api's Tools"})
+  })
   router.get('/beranda', (req, res, next) => {
      const view  = 'abc\n'
      const rview = view[Math.floor(Math.random() * view.length)]
@@ -65,13 +71,13 @@ require('dotenv').config()
      res.render('index', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/home', (req, res, next) => {
+  /*router.get('/home', (req, res, next) => {
     res.status(200).send(JSON.sringify({
       code: res.status(200),
       host: process.env.S_HOST,
-      title: 'Osteech | APi Online Tools',
+      title: 'Ostech | APi Online Tools',
       cretor: 'Ibnusyawall'
     }))
-  })
+  }*/
 
 module.exports = router

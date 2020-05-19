@@ -6,6 +6,7 @@ const generate= require('generate-password')
 const base64  = require('base-64')
 const base32  = require('base32')
 const fs      = require('fs')
+const superagent = require('superagent')
 
 const randomNum10 = Math.floor(Math.random() * 10)+1
 const randomNum20 = Math.floor(Math.random() * 20)+1
@@ -222,6 +223,29 @@ class urlShort {
   }
 }
 
+class c19 {
+  constructor(fn) {
+    this.fn = (callback) => {
+      request(config.corona.BASE_URL, (err, resp, body) => {
+        const json = JSON.parse(body)
+        callback(undefined, {
+          data: json['0']
+        })
+      })
+    }
+  }
+  indo(callback) {
+    this.fn((error, {data} = {}) => {
+      callback(undefined, {
+        negara: data.name,
+        positif: data.positif,
+        sembuh: data.sembuh,
+        meninggal: data.meninggal,
+        dirawat: data.dirawat
+      })
+    })
+  }
+}
 
 module.exports = {
   Main,
@@ -232,6 +256,7 @@ module.exports = {
   Base32,
   getIp,
   Gdrive,
-  urlShort
+  urlShort,
+  c19
 }
 

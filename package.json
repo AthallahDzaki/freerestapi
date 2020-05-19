@@ -22,7 +22,8 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "needle": "^2.4.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "superagent": "^5.2.2"
   },
   "devDependencies": {},
   "repository": {
