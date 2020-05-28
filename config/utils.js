@@ -7,6 +7,7 @@ const base64  = require('base-64')
 const base32  = require('base32')
 const fs      = require('fs')
 const superagent = require('superagent')
+const supertest  = require('supertest')
 
 const randomNum10 = Math.floor(Math.random() * 10)+1
 const randomNum20 = Math.floor(Math.random() * 20)+1
@@ -247,6 +248,19 @@ class c19 {
   }
 }
 
+class dicoding {
+  _cek(email, callback) {
+    supertest(config.dicoding.BASE_URL).post('/participation-status').send({
+      email: email
+    }).set('Accept', 'application/json').end((err, done) => {
+      if (err) throw err
+      callback(undefined, {
+        data: JSON.parse(done.res.text)
+      })
+    })
+  }
+}
+
 module.exports = {
   Main,
   Proxy,
@@ -257,6 +271,7 @@ module.exports = {
   getIp,
   Gdrive,
   urlShort,
-  c19
+  c19,
+  dicoding
 }
 

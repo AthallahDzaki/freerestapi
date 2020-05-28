@@ -10,6 +10,9 @@ require('dotenv').config()
   router.get('/doc/covid19', (req, res, next) => {
     res.render('cv19', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
+  router.get('/doc/dicoding', (req, res, next) => {
+    res.render('dicoding', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+  })
   router.get('/doc/tokped', (req, res, next) => {
     res.render('tokped', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })

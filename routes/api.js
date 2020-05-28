@@ -11,7 +11,8 @@ var {
   getIp,
   Gdrive,
   urlShort,
-  c19
+  c19,
+  dicoding
 } = require('./../config/utils')
 
 var {
@@ -23,6 +24,24 @@ var { FakerGen } = require('./../config/fakeName')
 var { Hilih }    = require('./../config/hilih')
 var { Spam }     = require('./../config/spam_wa')
 var { Check }    = require('./../config/tokped')
+
+router.get('/dicoding', (req, res, next) => {
+  const email = req.query.email
+  if (!email) {
+    res.send({
+      code: 403,
+      message: 'Paramater email wajib diisi.'
+    })
+  } else {
+    const main = new dicoding()
+    main._cek(email, (error, {data} = {}) => {
+      res.send({
+        email: email,
+        data
+      })
+    })
+  }
+})
 
 router.get('/corona', (req, res, next) => {
   const main = new c19()

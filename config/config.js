@@ -31,6 +31,9 @@ const config = {
   },
   corona: {
     BASE_URL: 'https://api.kawalcorona.com/indonesia'
+  },
+  dicoding: {
+    BASE_URL: 'https://idcamp.indosatooredoo.com/api'
   }
 };
 
