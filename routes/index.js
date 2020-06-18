@@ -7,6 +7,9 @@ require('dotenv').config()
   router.get('/doc/movie', (req, res, next) => {
     res.render('movie', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   }) */
+  router.get('/doc/hash_identifier', (req, res, next) => {
+    res.render('hash_ident', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+  })
   router.get('/doc/covid19', (req, res, next) => {
     res.render('cv19', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })

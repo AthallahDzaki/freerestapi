@@ -24,6 +24,30 @@ var { FakerGen } = require('./../config/fakeName')
 var { Hilih }    = require('./../config/hilih')
 var { Spam }     = require('./../config/spam_wa')
 var { Check }    = require('./../config/tokped')
+var hashIdent = require('./../config/hash_ident')
+
+// {hash_type, bit_length, char_length, char_type}
+
+router.get('/hash-identifier', (req, res, next) => {
+  const hash = req.query.hash
+  if (!hash) {
+    res.send({
+      code: 403,
+      message: 'Paramater email wajib diisi.'
+    })
+  } else {
+    const main = new hashIdent()
+    main.index(hash, (error, {hash_type, bit_length, char_length, char_type} = {}) => {
+      res.send({
+        hash: hash,
+        hash_type: hash_type,
+        bit_length: bit_length,
+        char_length: char_length,
+        char_type: char_type
+      })
+    })
+  }
+})
 
 router.get('/dicoding', (req, res, next) => {
   const email = req.query.email
