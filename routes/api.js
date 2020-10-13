@@ -4,7 +4,6 @@ const router  = express.Router()
 const {
     Base,
     Spam,
-    MyIP,
     Proxy,
     Hilih,
     Faker,
@@ -115,7 +114,7 @@ router.get('/fakename', (req, res) => {
                 res.send(data)
             })
             .catch(err => {
-                res.send(data)
+                res.send(err)
             })
     }
 })
