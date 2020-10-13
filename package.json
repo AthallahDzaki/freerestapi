@@ -21,10 +21,9 @@
     "hash.js": "^1.1.7",
     "hbs": "^4.1.0",
     "http-errors": "~1.6.3",
+    "lodash": "^4.17.20",
     "morgan": "~1.9.1",
     "needle": "^2.4.0",
-    "request": "^2.88.0",
-    "superagent": "^5.2.2",
     "supertest": "^4.0.2"
   },
   "devDependencies": {},

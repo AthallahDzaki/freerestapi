@@ -18,7 +18,7 @@ const {
     hashIdent
 } = require('./../lib')
 
-router.get('/hash-identifier', (req, res, next) => {
+router.get('/hash-identifier', (req, res) => {
     const hash = req.query.hash
     if (!hash) {
         res.send({
@@ -39,7 +39,7 @@ router.get('/hash-identifier', (req, res, next) => {
     }
 })
 
-router.get('/dicoding', (req, res, next) => {
+router.get('/dicoding', (req, res) => {
     const email = req.query.email
     if (!email) {
         res.send({
@@ -57,7 +57,7 @@ router.get('/dicoding', (req, res, next) => {
     }
 })
 
-router.get('/corona', (req, res, next) => {
+router.get('/corona', (req, res) => {
     Corona()
         .then(data => {
             res.send(data)
@@ -68,7 +68,7 @@ router.get('/corona', (req, res, next) => {
 })
 
 
-router.get('/spam', (req, res, next) => {
+router.get('/spam', (req, res) => {
     const key   = req.query.key
     const no    = req.query.no
     if (!no || !key) {
@@ -87,7 +87,7 @@ router.get('/spam', (req, res, next) => {
     }
 })
 
-router.get('/iplookup', (req, res, next) => {
+router.get('/iplookup', (req, res) => {
     const q = req.query.q
     if (!q) {
       res.status(200).send({
@@ -105,7 +105,7 @@ router.get('/iplookup', (req, res, next) => {
     }
 })
 
-router.get('/fakename', (req, res, next) => {
+router.get('/fakename', (req, res) => {
     const country = req.query.country
     if (!country) {
       res.status(500).send({code: 500, message: "Pliese input code country."})
@@ -120,7 +120,7 @@ router.get('/fakename', (req, res, next) => {
     }
 })
 
-router.get('/proxy', (req, res, next) => {
+router.get('/proxy', (req, res) => {
     Proxy()
         .then(data => {
             res.send(data)
@@ -130,7 +130,7 @@ router.get('/proxy', (req, res, next) => {
         })
 })
 
-router.get('/http-headers', (req, res, next) => {
+router.get('/http-headers', (req, res) => {
     const q = req.query.q
     if (!q) {
       res.status(500).send({
@@ -148,7 +148,7 @@ router.get('/http-headers', (req, res, next) => {
     }
 })
 
-router.get('/userwp', (req, res, next) => {
+router.get('/userwp', (req, res) => {
     const q = req.query.q
     if (!q) {
       res.status(500).send({
@@ -166,7 +166,7 @@ router.get('/userwp', (req, res, next) => {
     }
 })
 
-router.get('/base64', (req, res, next) => {
+router.get('/base64', (req, res) => {
     const encode = req.query.encode
     const decode = req.query.decode
     if (!encode && !decode) {
@@ -193,7 +193,7 @@ router.get('/base64', (req, res, next) => {
     }
 })
 
-router.get('/base32', (req, res, next) => {
+router.get('/base32', (req, res) => {
     const encode = req.query.encode
     const decode = req.query.decode
     if (!encode && !decode) {
@@ -220,7 +220,7 @@ router.get('/base32', (req, res, next) => {
     }
 })
 
-router.get('/sha1', (req, res, next) => {
+router.get('/sha1', (req, res) => {
     const str  = req.query.str
     if (!str) {
       res.send({
@@ -238,7 +238,7 @@ router.get('/sha1', (req, res, next) => {
     }
 })
 
-router.get('/sha256', (req, res, next) => {
+router.get('/sha256', (req, res) => {
     const str  = req.query.str
     if (!str) {
       res.send({
@@ -256,7 +256,7 @@ router.get('/sha256', (req, res, next) => {
     }
 })
 
-router.get('/sha512', (req, res, next) => {
+router.get('/sha512', (req, res) => {
     const str  = req.query.str
     if (!str) {
       res.send({
@@ -275,7 +275,7 @@ router.get('/sha512', (req, res, next) => {
 })
 
 
-router.get('/hilih', (req, res, next) => {
+router.get('/hilih', (req, res) => {
     const kata = req.query.kata
     if (!kata) {
       res.send({
@@ -293,7 +293,7 @@ router.get('/hilih', (req, res, next) => {
     }
 })
 
-router.get('/nulis', (req, res, next) => {
+router.get('/nulis', (req, res) => {
     const kata = req.query.kata
     if (!kata) {
       res.send({
