@@ -2,87 +2,87 @@ var express = require('express')
 var router = express.Router()
 require('dotenv').config()
 
-  router.get('/doc/hash_identifier', (res) => {
+  router.get('/doc/hash_identifier', (req, res) => {
     res.render('hash_ident', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/covid19', (res) => {
+  router.get('/doc/covid19', (req, res) => {
     res.render('cv19', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/dicoding', (res) => {
+  router.get('/doc/dicoding', (req, res) => {
     res.render('dicoding', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/tokped', (res) => {
+  router.get('/doc/tokped', (req, res) => {
     res.render('tokped', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/spam_wa', (res) => {
+  router.get('/doc/spam_wa', (req, res) => {
     res.render('spam_wa', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/proxy', (res) => {
+  router.get('/doc/proxy', (req, res) => {
     res.render('proxy', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/iplookup', (res) => {
+  router.get('/doc/iplookup', (req, res) => {
     res.render('iplookup', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/fakename', (res) => {
+  router.get('/doc/fakename', (req, res) => {
     res.render('fakename', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/http', (res) => {
+  router.get('/doc/http', (req, res) => {
     res.render('http', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/userwp', (res) => {
+  router.get('/doc/userwp', (req, res) => {
     res.render('userwp', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/base64', (res) => {
+  router.get('/doc/base64', (req, res) => {
     res.render('base64', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/base32', (res) => {
+  router.get('/doc/base32', (req, res) => {
     res.render('base32', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/gdrive', (res) => {
+  router.get('/doc/gdrive', (req, res) => {
     res.render('gdrive', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/ushort', (res) => {
+  router.get('/doc/ushort', (req, res) => {
     res.render('ushort', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/hash', (res) => {
+  router.get('/doc/hash', (req, res) => {
     res.render('hash', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/movie', (res) => {
+  router.get('/doc/movie', (req, res) => {
     res.render('movie', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/cur_ig', (res) => {
+  router.get('/doc/cur_ig', (req, res) => {
     res.render('curig', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/doc/hilih', (res) => {
+  router.get('/doc/hilih', (req, res) => {
     res.render('hilih', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
-  router.get('/', (res) => {
+  router.get('/', (req, res) => {
     res.redirect('/beranda')
   })
 
-  router.get('/about', (res) => {
+  router.get('/about', (req, res) => {
     res.render('about', {host: process.env.S_HOST, title: "about | Online Api's Tools"})
   })
 
-  router.get('/beranda', (res) => {
+  router.get('/beranda', (req, res) => {
      res.render('index', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
