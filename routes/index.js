@@ -1,6 +1,5 @@
 var express = require('express')
 var router = express.Router()
-var fs = require('fs')
 require('dotenv').config()
 
   router.get('/doc/hash_identifier', (req, res, next) => {
@@ -84,8 +83,6 @@ require('dotenv').config()
   })
 
   router.get('/beranda', (req, res, next) => {
-     const view  = 'abc\n'
-     const rview = view[Math.floor(Math.random() * view.length)]
      res.render('index', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
