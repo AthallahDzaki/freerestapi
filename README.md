@@ -1,3 +1,17 @@
+<div align="center">
+ 
+# Online Tools - OSTECH
+[![CodeFactor](https://www.codefactor.io/repository/github/ibnusyawall/ostch/badge/master)](https://www.codefactor.io/repository/github/ibnusyawall/ostch/overview/master)
+<details>
+ <summary>🥟 Help me!</summary>
+
+ [Saweria](https://saweria.co/donate/ibnusyawall)
+ 
+ [Paypal.me](https://paypal.me/syawal24)
+ 
+</details>
+</div>
+
 <p align="center">
   <img alt="ostch logo" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/logo.png" height="142"/>
 </p>
