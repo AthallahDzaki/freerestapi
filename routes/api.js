@@ -2,23 +2,21 @@ const express = require('express')
 const router  = express.Router()
 
 const {
-    Base
-    Spam
-    MyIP
-    Proxy
-    Hilih
-    Faker
-    Nulis
-    WPUser
-    Corona
-    Headers
-    HashGen
-    Dicoding
-    IpLookup
+    Base,
+    Spam,
+    MyIP,
+    Proxy,
+    Hilih,
+    Faker,
+    Nulis,
+    WPUser,
+    Corona,
+    Headers,
+    HashGen,
+    Dicoding,
+    IpLookup,
     hashIdent
 } = require('./../lib')
-
-var hashIdent = require('./../config/hash_ident')
 
 router.get('/hash-identifier', (req, res, next) => {
     const hash = req.query.hash
