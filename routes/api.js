@@ -16,7 +16,7 @@ const {
     Dicoding,
     IpLookup,
     hashIdent,
-	Tiktok,
+//	Tiktok,
 } = require('./../lib')
 
 async function Tiktok(url) {
