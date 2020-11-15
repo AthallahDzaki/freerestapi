@@ -1,5 +1,6 @@
 const express = require('express')
 const router  = express.Router()
+const TikTokScraper = require('tiktok-scraper');
 
 const {
     Base,
@@ -17,6 +18,15 @@ const {
     hashIdent,
 	Tiktok,
 } = require('./../lib')
+
+async function Tiktok(url) {
+    try {
+        const videoMeta = await TikTokScraper.getVideoMeta(url);
+        return videoMeta.collector[0];
+    } catch (error) {
+        console.log(error);
+    }
+} // Why Use Static Function? IDK Just Try a Best Way
 
 router.get('/hash-identifier', (req, res) => {
     const hash = req.query.hash
