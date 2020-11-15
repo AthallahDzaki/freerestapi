@@ -14,7 +14,8 @@ const {
     HashGen,
     Dicoding,
     IpLookup,
-    hashIdent
+    hashIdent,
+	Tiktok,
 } = require('./../lib')
 
 router.get('/hash-identifier', (req, res) => {
@@ -308,6 +309,22 @@ router.get('/nulis', (req, res) => {
                 res.send(err)
             })
     }
+})
+
+router.get('/tiktok', (req, res) => {
+	const url = req.query.url || req.query.link;
+	if(!url)
+	return res.send({
+        code: 400,
+        message: 'pliese input parameter url atau link.'
+    })
+	Tiktok(url)
+			.then(data => {
+				res.send(data)
+			})
+			.catch(err => {
+				res.send(err)
+			})
 })
 
 module.exports = router
