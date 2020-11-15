@@ -1,10 +1,10 @@
 <div class="container-fluid" id="container-wrapper">
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-     <h1 class="h3 mb-0 text-gray-800">Get Movie</h1>
+     <h1 class="h3 mb-0 text-gray-800">Nulis</h1>
   </div>
      <div class="form-group">
        <label for="exampleFormControlReadonly">Usage</label>
-       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/v1/movie?q={movieTitle}" id="exampleFormControlReadonly" readonly>
+       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/v1/nulis?text={tulisan}" id="exampleFormControlReadonly" readonly>
      </div>
      </div>
      <div class="col-lg-6">
@@ -13,7 +13,7 @@
          <h6 class="m-0 font-weight-bold text-primary>Get Movie Link</h6>
        </div>
        <div class="card-body">
-         <p>Get Movie Link, Mencari link film yang ingin dicari</p>
+         <p>Nulis, membuat tulisan dengan API</p>
          <a tabindex="0" class="btn btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="Example / contoh penggunaan"
          data-content="Example Usage">Example Usage</a>
        </div>
@@ -29,7 +29,7 @@
        <pre><code class="javascript">
  const request = require('request')
 
- request.get('{{ host }}/api/v1/movie?q=si manis', {json: true}, (error, response, body) => {
+ request.get('{{ host }}/api/v1/nulis?q=halo', {json: true}, (error, response, body) => {
    if (!error || response.statusCode == 200) {
      console.log(JSON.stringify(body))
    } else { return throw error }
@@ -45,7 +45,7 @@
        </a>
        <pre><code class="plain-text">
 
-   $url = '{{ host }}/api/v1/movie?q=si manis';
+   $url = '{{ host }}/api/v1/nulis?q=halo';
    $curl = curl_init($url);
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
    curl_setopt($curl, CURLOPT_HTTPHEADER, [
@@ -61,16 +61,7 @@
        <pre><code class="json">
  {
       "code":200,
-      "message":"success",
-      "totalMovie":"1",
-      "result": [{
-           "title":"Si Manis Jembatan Ancol (2019)",
-           "synopsis":"Si Manis Jembatan Ancol Legenda yang mengerikan telah menyebar. Munculnya Maryam sebagai ...",
-           "release":"2019",
-           "duration":"N/A",
-           "videoEmbed":"https://www.youtube.com/embed/jvf6dnI8Ytg",
-           "linkDownload":"https://www.punteuncoy.online/2019/12/si-manis-jembatan-ancol-2019.html"
-      }]
+      "link":"[LINK FROM VIDEO"
  }
        </code></pre>
        </div>

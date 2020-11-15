@@ -1,10 +1,10 @@
 <div class="container-fluid" id="container-wrapper">
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-     <h1 class="h3 mb-0 text-gray-800">TokoPedia Valid Check</h1>
+     <h1 class="h3 mb-0 text-gray-800">Tiktok Downloader</h1>
   </div>
      <div class="form-group">
        <label for="exampleFormControlReadonly">Usage</label>
-       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/v1/tokped?no={nomor}" id="exampleFormControlReadonly" readonly>
+       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/v1/tiktok?url={URL}" id="exampleFormControlReadonly" readonly>
      </div>
      </div>
      <div class="col-lg-6">
@@ -13,7 +13,7 @@
          <h6 class="m-0 font-weight-bold text-primary>Tokopedia Valid Check</h6>
        </div>
        <div class="card-body">
-         <p>Tokopedia Valid Check, mengecek apakah email atau nomor hp tersebut valid atau terdaftar di tokopedia atau belum.</p>
+         <p>Mendownload Video Dari Tiktok.</p>
          <a tabindex="0" class="btn btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="Example / contoh penggunaan"
          data-content="Example Usage">Example Usage</a>
        </div>
@@ -29,7 +29,7 @@
        <pre><code class="javascript">
  const request = require('request')
 
- request.get('{{ host }}/api/v1/tokped?no=082299265151', {json: true}, (error, response, body) => {
+ request.get('{{ host }}/api/v1/tiktok?url=https://www.tiktok.com/@tiktok/video/6807491984882765062', {json: true}, (error, response, body) => {
    if (!error || response.statusCode == 200) {
      console.log(JSON.stringify(body))
    } else { return throw error }
@@ -45,7 +45,7 @@
        </a>
        <pre><code class="plain-text">
 
-   $url = '{{ host }}/api/v1/tokped?no=082299265151';
+   $url = '{{ host }}/api/v1/tiktok?url=https://www.tiktok.com/@tiktok/video/6807491984882765062';
    $curl = curl_init($url);
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
    curl_setopt($curl, CURLOPT_HTTPHEADER, [
@@ -60,13 +60,59 @@
        <code style="text-align: center;"> [ Example Result ] : </code><br />
        <pre><code class="json">
  {
-     "code":200,
-     "message":"success",
-     "result": [{
-          "no":"082299265151",
-          "status":"valid"
-     }]
- }
+  id: '6807491984882765062',
+  text: 'We’re kicking off the #happyathome live stream series today at 5pm PT!',
+  createTime: 1584992742,
+  authorMeta: {
+    id: '107955',
+    secUid: 'MS4wLjABAAAAv7iSuuXDJGDvJkmH_vz1qkDZYo1apxgzaxdBSeIuPiM',
+    name: 'tiktok',
+    nickName: 'TikTok',
+    following: 491,
+    fans: 48600000,
+    heart: 241700000,
+    video: 113,
+    digg: 38,
+    verified: true,
+    private: false,
+    signature: 'Make Your Day',
+    avatar: 'https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1645136815763462~c5_1080x1080.jpeg?x-expires=1605488400&x-signature=tM%2F9S6o0hw78iRD3nD9iYLaR25E%3$
+  },
+  musicMeta: {
+    musicId: '6807487887634909957',
+    musicName: 'original sound',
+    musicAuthor: 'TikTok',
+    musicOriginal: true,
+    coverThumb: 'https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1645136815763462~c5_100x100.jpeg?x-expires=1605488400&x-signature=PpkTEmKom4Z6yiTcivzsJfjnuT8%3$
+    coverMedium: 'https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1645136815763462~c5_720x720.jpeg?x-expires=1605488400&x-signature=s0qw4CZldgPMhD5Ftw%2Frjvb1rZ$
+    coverLarge: 'https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1645136815763462~c5_1080x1080.jpeg?x-expires=1605488400&x-signature=tM%2F9S6o0hw78iRD3nD9iYLaR2$
+  },
+  imageUrl: 'https://p16-sign-sg.tiktokcdn.com/obj/tos-maliva-p-0068/2bc9c980bea7409698bd0acf0206bb8f_1584992746?x-expires=1605423600&x-signature=g14wH9HK3VQsrHu5WwNvR$
+  videoUrl: 'https://v16-web.tiktok.com/video/tos/useast2a/tos-useast2a-ve-0068c003/0dc9964505df43288febb6aac33ac6a0/?a=1988&br=472&bt=236&cr=0&cs=0&cv=1&dr=0&ds=3&er=$
+  videoUrlNoWaterMark: null,
+  videoMeta: { width: 576, height: 1024, ratio: '720p', duration: 16 },
+  covers: {
+    default: 'https://p16-sign-sg.tiktokcdn.com/obj/tos-maliva-p-0068/2bc9c980bea7409698bd0acf0206bb8f_1584992746?x-expires=1605423600&x-signature=g14wH9HK3VQsrHu5WwNv$
+    origin: 'https://p16-sign-sg.tiktokcdn.com/obj/tos-maliva-p-0068/d1b00294a06e488b851ad6553cad41a0_1584992746?x-expires=1605423600&x-signature=lZjMYru7W4jeRg3HfJW6S$
+  },
+  diggCount: 306900,
+  shareCount: 2466,
+  playCount: 3900000,
+  commentCount: 17100,
+  downloaded: false,
+  mentions: [],
+  hashtags: [
+    {
+      id: '609365',
+      name: 'happyathome',
+      title: "Who said that staying at home was a bad thing? Staying home and staying safe is the most responsible thing that we can do right now, so we're teaming up $
+        '\n' +
+        "Join TikTok in supporting the World Health Organization's fight against COVID-19: https://covid19responsefund.org/?&ms=tiktok",
+      cover: 'https://p16-va-default.akamaized.net/obj/musically-maliva-obj/b1d5a73217f6ac2eaefba8714784a05d'
+    }
+  ]
+}
+
        </code></pre>
        </div>
      </div>

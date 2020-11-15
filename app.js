@@ -16,7 +16,7 @@ const limit15 = limiter({
   max: 50,
   message: JSON.stringify({
     code: 500,
-    message: "Hehe limit gan maap, waiting 5minutes bro"
+    message: "Maaf Limit, Akses Lagi 5 Menit"
   })
 })
 
