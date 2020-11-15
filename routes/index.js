@@ -75,15 +75,15 @@ require('dotenv').config()
   })
 
   router.get('/', (req, res) => {
-    res.redirect('/beranda')
+    res.render('index', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+  })
+  
+  router.get('/doc/nulis' , (req, res) => {
+	res.render('nulis', {host: process.env.S_HOST, title: "Free Rest API | Online Api's Tools"})
   })
 
   router.get('/about', (req, res) => {
     res.render('about', {host: process.env.S_HOST, title: "about | Online Api's Tools"})
-  })
-
-  router.get('/beranda', (req, res) => {
-     res.render('index', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
   })
 
 module.exports = router
