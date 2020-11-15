@@ -24,7 +24,8 @@
     "lodash": "^4.17.20",
     "morgan": "~1.9.1",
     "needle": "^2.4.0",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+	"tiktok-scraper":"1.4.2"
   },
   "devDependencies": {},
   "repository": {
