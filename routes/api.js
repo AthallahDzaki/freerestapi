@@ -311,14 +311,14 @@ router.get('/nulis', (req, res) => {
     }
 })
 
-router.get('/tiktok', (req, res) => {
+router.get('/tiktok', async (req, res) => {
 	const url = req.query.url || req.query.link;
 	if(!url)
 	return res.send({
         code: 400,
         message: 'pliese input parameter url atau link.'
     })
-	Tiktok(url)
+	await Tiktok(url)
 			.then(data => {
 				res.send(data)
 			})
