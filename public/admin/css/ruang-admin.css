@@ -710,7 +710,7 @@ a:focus {
   padding: .5rem 0;
   min-width: 10rem;
   font-size: 0.85rem;
-  margin: 0.1px 0.1px 1rem 0.1px;
+  margin: 0.1px 0 1rem 0;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-header,
@@ -792,7 +792,7 @@ a:focus {
 }
 
 .sidebar hr.sidebar-divider {
-  margin: 1rem 0.1px 1rem 0.1px;
+  margin: 1rem 0 1rem 0;
 }
 
 .sidebar .sidebar-heading {
@@ -1000,7 +1000,7 @@ a:focus {
     padding: .5rem 0;
     min-width: 10rem;
     font-size: 0.85rem;
-    margin: 0.1px 0.1px 1rem 0.1px;
+    margin: 0.1px 0 1rem 0;
   }
 
   .sidebar.toggled .nav-item .collapse .collapse-inner .collapse-header,
@@ -1055,7 +1055,7 @@ a:focus {
   }
 
   .sidebar.toggled hr.sidebar-divider {
-    margin: 1rem 0 1rem 0rem;
+    margin: 1rem 0 1rem ;
   }
 
   .sidebar.toggled .sidebar-heading {
@@ -1095,7 +1095,7 @@ a:focus {
   }
 
   .sidebar hr.sidebar-divider {
-    margin: 1rem 0.rem 1rem 0rem;
+    margin: 1rem 0.rem 1rem 0;
   }
 
   .topbar .navbar-search {
