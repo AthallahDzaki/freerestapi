@@ -16,6 +16,10 @@ var title = "Free Rest API | Online API's Tools";
 	  res.render('ph', {host: process.env.S_HOST, title: title})
   })
   
+  router.get('/doc/randomp', (req, res) => {
+	  res.render('randomp', {host: process.env.S_HOST, title: title})
+  })
+  
   router.get('/doc/tiktok', (req, res) => {
 	res.render('tiktok',  {host: process.env.S_HOST, title: title})
   })

@@ -19,9 +19,9 @@ const {
 	Youtube,
 	KBBI,
 	Lirik,
-	Pornhub
+	Pornhub,
 //	Xnxx,
-//  RandomP,
+	RandomP
 //  RandomH
 } = require('./../lib')
 
@@ -153,6 +153,16 @@ router.get('/fakename', (req, res) => {
                 res.send(err)
             })
     }
+})
+
+router.get('/randomp', (req, res) => {
+	RandomP()
+			.then(url => {
+				res.send(url)
+			})
+			.catch(err => {
+				res.send(err);
+			})
 })
 
 router.get('/proxy', (req, res) => {
