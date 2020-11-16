@@ -690,7 +690,7 @@ a:focus {
   -webkit-box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
   box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
   transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;    
+  -webkit-transition: all 0.2s ease-in-out;
 }
 
 .sidebar .nav-item .collapsing {
@@ -825,12 +825,12 @@ a:focus {
 }
 
 .sidebar.toggled .nav-item {
-  margin-bottom: 0.1px;
+  margin-bottom: 0;
 }
 
 
 .sidebar.toggled hr.sidebar-divider {
-  margin: 0.1px 0.1px 1rem 0.1px;
+  margin: 1rem;
 }
 
 .sidebar.toggled #sidebarToggle::after {
@@ -1055,7 +1055,7 @@ a:focus {
   }
 
   .sidebar.toggled hr.sidebar-divider {
-    margin: 1rem 0 1rem ;
+    margin: 1rem;
   }
 
   .sidebar.toggled .sidebar-heading {
