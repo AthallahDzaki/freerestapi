@@ -327,7 +327,7 @@ router.get('/nulis', (req, res) => {
 })
 
 router.get('/yt2', (req, res) => {
-	const id = req.query.url || req.query.link;
+	var id = req.query.url || req.query.link;
 	if(!id || id == undefined) 
         return response.send("{code:400,\nmessage:'Input ID Or Link of Video'}");
     if(id.includes("youtube")){
@@ -339,7 +339,6 @@ router.get('/yt2', (req, res) => {
 	res.header('Content-Disposition', `attachment; filename="audio.mp3"`);
 	ytdl(id, {
       format: 'mp3',
-      filter: 'audioonly',
       filter: 'audioonly'
      }).pipe(res);
 })
