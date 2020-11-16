@@ -12,7 +12,7 @@
   <meta property="og:image:width" content="653">
   <meta property="og:image:height" content="366">
   <meta property="og:site_name" content="stech.best" >
-  <link href="{{ host }}/admin/img/logo/logo3.png" rel="icon">
+  <link href="{{ host }}/admin/img/logo/icon.png" rel="icon">
   <title>{{ title }}</title>
   <link href='/admin/vendor/fontawesome-free/css/all.min.css' rel="stylesheet" type="text/css">
   <link href='/admin/vendor/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css">
@@ -50,11 +50,11 @@
         <div class="sidebar-brand-icon">
           <img src="{{ host }}/admin/img/logo/logo3.png">
         </div>
-        <div class="sidebar-brand-text mx-3">OStech APi's</div>
+        <div class="sidebar-brand-text mx-3">Free Rest APi's</div>
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item active">
-        <a class="nav-link" href="/beranda">
+        <a class="nav-link" href="/">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Beranda</span></a>
       </li>
@@ -67,7 +67,7 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#base"
           aria-expanded="true" aria-controls="base">
           <i class="far fa-fw fa-window-maximize"></i>
-          <span>BASE32 / BASE64</span>
+          <span>BASE32 / BASE64, HASH GEN</span>
         </a>
         <div id="base" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -123,12 +123,6 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/doc/gdrive">
-          <i class="fas fa-fw fa-window-maximize"></i>
-          <span>GDrive Bypass</span>
-        </a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="/doc/ushort">
           <i class="fas fa-fw fa-window-maximize"></i>
           <span>Url Short</span>
@@ -144,12 +138,6 @@
         <a class="nav-link" href="/doc/spam_wa">
           <i class="fas fa-fw fa-window-maximize"></i>
           <span>Spam WhatsApp</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/doc/tokped">
-          <i class="fas fa-fw fa-window-maximize"></i>
-          <span>Tokped Check</span>
         </a>
       </li>
       <li class="nav-item">
@@ -170,10 +158,18 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/doc/nulis">
-          <i class="fas fa-fw fa-window-maximize"></i>
-          <span>Nulis</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#base"
+          aria-expanded="true" aria-controls="base">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>MAGER</span>
         </a>
+        <div id="base" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">USEFULL API</h6>
+            <a class="collapse-item" href="/doc/nulis">Nulis</a>
+			<a class="collapse-item" href="/doc/KBBI">KBBI</a>
+          </div>
+        </div>
       </li>
 	  <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#base"
@@ -185,6 +181,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Video Downloader</h6>
             <a class="collapse-item" href="/doc/tiktok">Tiktok Downloader</a>
+			<a class="collapse-item" href="/doc/yt">Youtube Downloader</a>
           </div>
         </div>
       </li>

@@ -2,76 +2,86 @@ var express = require('express')
 var router = express.Router()
 require('dotenv').config()
 
+var title = "Free Rest API | Online API's Tools";
+
   router.get('/doc/hash_identifier', (req, res) => {
-    res.render('hash_ident', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('hash_ident', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/covid19', (req, res) => {
-    res.render('cv19', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('cv19', {host: process.env.S_HOST, title: title})
+  })
+  
+  router.get('/doc/tiktok', (req, res) => {
+	res.reader('tiktok',  {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/dicoding', (req, res) => {
-    res.render('dicoding', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('dicoding', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/tokped', (req, res) => {
-    res.render('tokped', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('tokped', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/spam_wa', (req, res) => {
-    res.render('spam_wa', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('spam_wa', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/proxy', (req, res) => {
-    res.render('proxy', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('proxy', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/iplookup', (req, res) => {
-    res.render('iplookup', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('iplookup', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/fakename', (req, res) => {
-    res.render('fakename', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('fakename', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/http', (req, res) => {
-    res.render('http', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('http', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/userwp', (req, res) => {
-    res.render('userwp', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('userwp', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/base64', (req, res) => {
-    res.render('base64', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('base64', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/base32', (req, res) => {
-    res.render('base32', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('base32', {host: process.env.S_HOST, title: title})
   })
 
-  router.get('/doc/gdrive', (req, res) => {
-    res.render('gdrive', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+  router.get('/doc/KBBI', (req, res) => {
+    res.render('KBBI', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/ushort', (req, res) => {
-    res.render('ushort', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('ushort', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/hash', (req, res) => {
-    res.render('hash', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('hash', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/movie', (req, res) => {
-    res.render('movie', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('movie', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/cur_ig', (req, res) => {
-    res.render('curig', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('curig', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/hilih', (req, res) => {
-    res.render('hilih', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('hilih', {host: process.env.S_HOST, title: title})
+  })
+  
+  router.get('/doc/yt', (req. res) => {
+	  res.reader('yt', {host: process.env.S_HOST, title: title});
   })
 
   router.get('/', (req, res) => {

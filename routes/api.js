@@ -16,6 +16,8 @@ const {
     IpLookup,
     hashIdent,
 	Tiktok,
+	Youtube,
+	KBBI
 } = require('./../lib')
 
 router.get('/hash-identifier', (req, res) => {
@@ -87,12 +89,25 @@ router.get('/spam', (req, res) => {
     }
 })
 
+router.get('/kbbi', (req, res) => {
+	const kata = req.query.text
+	if(!kata || kata == undefined)
+	  return res.status(200).send({code: 200,message: 'Masukkan Parameter kata.'})
+	KBBI(kata)
+			.then(data => {
+				res.send(data);
+			})
+			.catch(err => {
+				res.send(err);
+			})
+})
+
 router.get('/iplookup', (req, res) => {
     const q = req.query.q
     if (!q) {
       res.status(200).send({
         code: 200,
-        message: 'Pliese input parameter url.'
+        message: 'Pleasee input parameter url.'
       })
     } else {
         IpLookup(q)
@@ -108,7 +123,7 @@ router.get('/iplookup', (req, res) => {
 router.get('/fakename', (req, res) => {
     const country = req.query.country
     if (!country) {
-      res.status(500).send({code: 500, message: "Pliese input code country."})
+      res.status(500).send({code: 500, message: "Pleasee input code country."})
     } else {
         Faker(country)
             .then(data => {
@@ -135,7 +150,7 @@ router.get('/http-headers', (req, res) => {
     if (!q) {
       res.status(500).send({
         code: 500,
-        message: 'required parameter url.'
+        message: 'required parameter q.'
       })
     } else {
         Headers(q)
@@ -153,7 +168,7 @@ router.get('/userwp', (req, res) => {
     if (!q) {
       res.status(500).send({
         code: 500,
-        message: 'Pliese input parameter url.'
+        message: 'Pleasee input parameter q.'
       })
     } else {
         WPUser(q)
@@ -172,7 +187,7 @@ router.get('/base64', (req, res) => {
     if (!encode && !decode) {
       res.status(500).send({
         code: 500,
-        message: 'Failed, pliese input parameter.'
+        message: 'Failed, Pleasee input parameter.'
       })
     } else if (encode) {
         Base('b64enc', encode)
@@ -199,7 +214,7 @@ router.get('/base32', (req, res) => {
     if (!encode && !decode) {
       res.status(500).send({
         code: 500,
-        message: 'Failed, pliese input parameter.'
+        message: 'Failed, Pleasee input parameter.'
       })
     } else if (encode) {
         Base('b32enc', encode)
@@ -225,7 +240,7 @@ router.get('/sha1', (req, res) => {
     if (!str) {
       res.send({
         code: 404,
-        message: 'pliese input parameter url.'
+        message: 'Pleasee input parameter str.'
       })
     } else {
         HashGen('sha1', str)
@@ -243,7 +258,7 @@ router.get('/sha256', (req, res) => {
     if (!str) {
       res.send({
         code: 404,
-        message: 'pliese input parameter url.'
+        message: 'Pleasee input parameter str.'
       })
     } else {
         HashGen('sha256', str)
@@ -261,7 +276,7 @@ router.get('/sha512', (req, res) => {
     if (!str) {
       res.send({
         code: 404,
-        message: 'pliese input parameter url.'
+        message: 'Pleasee input parameter str.'
       })
     } else {
         HashGen('sha512', str)
@@ -280,7 +295,7 @@ router.get('/hilih', (req, res) => {
     if (!kata) {
       res.send({
         code: 400,
-        message: 'pliese input parameter kata.'
+        message: 'Pleasee input parameter kata.'
       })
     } else {
         Hilih(kata)
@@ -298,7 +313,7 @@ router.get('/nulis', (req, res) => {
     if (!kata) {
       res.send({
         code: 400,
-        message: 'pliese input parameter kata.'
+        message: 'Pleasee input parameter kata.'
       })
     } else {
         Nulis(kata)
@@ -311,12 +326,44 @@ router.get('/nulis', (req, res) => {
     }
 })
 
-router.get('/tiktok', (req, res) => {
+router.get('/yt2', (req, res) => {
+	const id = req.query.url || req.query.link;
+	if(!id || id == undefined) 
+        return response.send("{code:400,\nmessage:'Input ID Or Link of Video'}");
+    if(id.includes("youtube")){
+		urls = id;
+		var r, rx = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/;
+    	r = urls.match(rx);
+		id = r[1];
+    }
+	res.header('Content-Disposition', `attachment; filename="audio.mp3"`);
+	ytdl(id, {
+      format: 'mp3',
+      filter: 'audioonly',
+      filter: 'audioonly'
+     }).pipe(res);
+})
+
+router.get('/yt', (req, res) => {
 	const url = req.query.url || req.query.link;
-	if(!url)
+	if(!url || url == undefined)
 	return res.send({
         code: 400,
-        message: 'pliese input parameter url atau link.'
+        message: 'input parameter url atau link.'
+    })
+	Youtube(url)
+			.then(data => {
+				res.send(data);
+			})
+			.catch(err => {res.send(err)})
+})
+
+router.get('/tiktok', (req, res) => {
+	const url = req.query.url || req.query.link;
+	if(!url || url == undefined)
+	return res.send({
+        code: 400,
+        message: 'input parameter url atau link.'
     })
 	Tiktok(url)
 			.then(data => {
