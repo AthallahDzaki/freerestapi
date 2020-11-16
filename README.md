@@ -1,7 +1,7 @@
 <div align="center">
  
 # Online Tools - Free Rest API
-[![CodeFactor](https://www.codefactor.io/repository/github/ibnusyawall/ostch/badge/master)](https://www.codefactor.io/repository/github/ibnusyawall/ostch/overview/master)
+[![CodeFactor](https://www.codefactor.io/repository/github/athallahdzaki/freerestapi2/badge)](https://www.codefactor.io/repository/github/athallahdzaki/freerestapi2)
 <details>
  <summary>🥟 Donate :)!</summary>
 
