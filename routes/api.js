@@ -372,12 +372,10 @@ router.get('/ph', (req, res) => {
         })
 	Pornhub(link)
 				.then(data => {
-					res.set('Content-Type', 'text/html');
-					res.send(new Buffer('<h2>Test String</h2>'));
+					res.send(data);
 				})
 				.catch(err => {
-					res.sendStatus(400).
-					send('400\nInternal Server Error');
+					res.send('400\nInternal Server Error');
 				})
 })
 
