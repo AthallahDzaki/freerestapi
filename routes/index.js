@@ -13,7 +13,7 @@ var title = "Free Rest API | Online API's Tools";
   })
   
   router.get('/doc/tiktok', (req, res) => {
-	res.reader('tiktok',  {host: process.env.S_HOST, title: title})
+	res.render('tiktok',  {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/dicoding', (req, res) => {
