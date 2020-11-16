@@ -3,22 +3,12 @@ var express = require('express')
 var path = require('path')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
-var limiter = require('express-rate-limit')
 var cors = require('cors')
 
 var indexRouter = require('./routes/index')
 var apiRouter   = require('./routes/api')
 
 var app = express()
-
-const limit15 = limiter({
-  windowMs: 10*60*1000,
-  max: 50,
-  message: JSON.stringify({
-    code: 500,
-    message: "Maaf Limit, Akses Lagi 5 Menit"
-  })
-})
 
 app.all('/*', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");

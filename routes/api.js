@@ -18,7 +18,11 @@ const {
 	Tiktok,
 	Youtube,
 	KBBI,
-	Lirik
+	Lirik,
+	Pornhub
+//	Xnxx,
+//  RandomP,
+//  RandomH
 } = require('./../lib')
 
 router.get('/hash-identifier', (req, res) => {
@@ -68,6 +72,22 @@ router.get('/corona', (req, res) => {
         .catch(err => {
             res.send(err)
         })
+})
+
+router.get('/ph', (req, res) => {
+	const link = req.query.l || req.query.link
+	if(!link || link == undefined)
+		return res.send({
+            code: 200,
+            message: 'Input parameter link / l.'
+        })
+	Pornhub(link)
+				.then(data => {
+					res.send(data);
+				})
+				.catch(err => {
+					res.send(err);
+				})
 })
 
 

@@ -12,6 +12,10 @@ var title = "Free Rest API | Online API's Tools";
     res.render('cv19', {host: process.env.S_HOST, title: title})
   })
   
+  router.get('/doc/ph', (req, res) => {
+	  res.render('ph', {host: process.env.S_HOST, title: title})
+  })
+  
   router.get('/doc/tiktok', (req, res) => {
 	res.render('tiktok',  {host: process.env.S_HOST, title: title})
   })
