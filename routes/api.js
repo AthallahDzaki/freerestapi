@@ -376,7 +376,8 @@ router.get('/ph', (req, res) => {
 					res.send(new Buffer('<h2>Test String</h2>'));
 				})
 				.catch(err => {
-					res.send(err);
+					res.sendStatus(400).
+					send('400\nInternal Server Error');
 				})
 })
 
