@@ -710,7 +710,7 @@ a:focus {
   padding: .5rem 0;
   min-width: 10rem;
   font-size: 0.85rem;
-  margin: 0.1px 0 1rem 0;
+  margin: 1rem;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-header,
@@ -792,7 +792,7 @@ a:focus {
 }
 
 .sidebar hr.sidebar-divider {
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 1rem;
 }
 
 .sidebar .sidebar-heading {
@@ -1000,7 +1000,7 @@ a:focus {
     padding: .5rem 0;
     min-width: 10rem;
     font-size: 0.85rem;
-    margin: 0.1px 0 1rem 0;
+    margin: 1rem;
   }
 
   .sidebar.toggled .nav-item .collapse .collapse-inner .collapse-header,
