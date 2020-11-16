@@ -80,7 +80,7 @@ var title = "Free Rest API | Online API's Tools";
     res.render('hilih', {host: process.env.S_HOST, title: title})
   })
   
-  router.get('/doc/yt', (req. res) => {
+  router.get('/doc/yt', (req, res) => {
 	  res.reader('yt', {host: process.env.S_HOST, title: title});
   })
 
