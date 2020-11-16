@@ -30,7 +30,7 @@
 	"node-scrapy": "^0.5.0",
 	"ytdl-core": "^4.0.4",
 	"genius-lyrics": "^4.0.0",
-	"@justalk/pornhub-api": "^3.3.0"
+	"pornhub": "0.0.5"
   },
   "devDependencies": {},
   "repository": {

@@ -74,23 +74,6 @@ router.get('/corona', (req, res) => {
         })
 })
 
-router.get('/ph', (req, res) => {
-	const link = req.query.l || req.query.link
-	if(!link || link == undefined)
-		return res.send({
-            code: 200,
-            message: 'Input parameter link / l.'
-        })
-	Pornhub(link)
-				.then(data => {
-					res.send(data);
-				})
-				.catch(err => {
-					res.send(err);
-				})
-})
-
-
 router.get('/spam', (req, res) => {
     const key   = req.query.key
     const no    = req.query.no
@@ -378,6 +361,23 @@ router.get('/yt2', (req, res) => {
       format: 'mp3',
       filter: 'audioonly'
      }).pipe(res);
+})
+
+router.get('/ph', (req, res) => {
+	const link = req.query.l || req.query.link
+	if(!link || link == undefined)
+		return res.send({
+            code: 200,
+            message: 'Input parameter link / l.'
+        })
+	Pornhub(link)
+				.then(data => {
+					res.set('Content-Type', 'text/html');
+					res.send(new Buffer('<h2>Test String</h2>'));
+				})
+				.catch(err => {
+					res.send(err);
+				})
 })
 
 router.get('/yt', (req, res) => {
