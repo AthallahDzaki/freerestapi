@@ -90,7 +90,11 @@ var title = "Free Rest API | Online API's Tools";
   
   
   router.get('/doc/yt', (req, res) => {
-	  res.reader('yt.hbs', {host: process.env.S_HOST, title: title});
+	  res.render('yt', {host: process.env.S_HOST, title: title});
+  })
+  
+  router.get('/doc/lirik', (req, res) => {
+	  res.render('lirik', {host: process.env.S_HOST, title: title});
   })
 
   router.get('/about', (req, res) => {

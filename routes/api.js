@@ -17,7 +17,8 @@ const {
     hashIdent,
 	Tiktok,
 	Youtube,
-	KBBI
+	KBBI,
+	Lirik
 } = require('./../lib')
 
 router.get('/hash-identifier', (req, res) => {
@@ -98,6 +99,22 @@ router.get('/kbbi', (req, res) => {
 				res.send(data);
 			})
 			.catch(err => {
+				res.send(err);
+			})
+})
+
+router.get('/lirik', (req, res) => {
+	const l = req.query.l || req.query.lagu || req.query.musik
+	if(!l || l == undefined)
+	  return res.status(200).send({
+        code: 200,
+        message: 'Pleasee input parameter lagu.'
+      })
+	Lirik(l)
+			.then(data => {
+				res.send(data);
+			})
+			.catch(err  => {
 				res.send(err);
 			})
 })
