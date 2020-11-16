@@ -79,21 +79,22 @@ var title = "Free Rest API | Online API's Tools";
   router.get('/doc/hilih', (req, res) => {
     res.render('hilih', {host: process.env.S_HOST, title: title})
   })
-  
-  router.get('/doc/yt', (req, res) => {
-	  res.reader('yt', {host: process.env.S_HOST, title: title});
-  })
 
   router.get('/', (req, res) => {
-    res.render('index', {host: process.env.S_HOST, title: "ostech | Online Api's Tools"})
+    res.render('index', {host: process.env.S_HOST, title: title})
   })
   
   router.get('/doc/nulis' , (req, res) => {
-	res.render('nulis', {host: process.env.S_HOST, title: "Free Rest API | Online Api's Tools"})
+	res.render('nulis', {host: process.env.S_HOST, title: title})
+  })
+  
+  
+  router.get('/doc/yt', (req, res) => {
+	  res.reader('yt.hbs', {host: process.env.S_HOST, title: title});
   })
 
   router.get('/about', (req, res) => {
-    res.render('about', {host: process.env.S_HOST, title: "about | Online Api's Tools"})
+    res.render('about', {host: process.env.S_HOST, title: "about | Free Rest API"})
   })
 
 module.exports = router
