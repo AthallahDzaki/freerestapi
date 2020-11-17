@@ -210,7 +210,7 @@ router.get('/nhentai', (req, res) => {
 			 })
 })
 
-router.get('/randomh' (req, res) => {
+router.get('/randomh', (req, res) => {
 	RandomH()
 			.then(url => {
 				res.send(url)
