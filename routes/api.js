@@ -21,8 +21,9 @@ const {
 	Lirik,
 	Pornhub,
 //	Xnxx,
-	RandomP
-//  RandomH
+	RandomP,
+	RandomH,
+	Nhentai
 } = require('./../lib')
 
 router.get('/hash-identifier', (req, res) => {
@@ -191,6 +192,32 @@ router.get('/http-headers', (req, res) => {
                 res.send(err)
             })
     }
+})
+
+router.get('/nhentai', (req, res) => {
+	let d = req.query.d;
+	if(!d || d == undefined)
+		return res.status(500).send({
+			code: 500,
+			message: "Require Parameter d"
+		})
+	Nhentai(d)
+			 .then(url => {
+				 send.res(url);
+			 })
+			 .catch(err => {
+				 send.res(err);
+			 })
+})
+
+router.get('/randomh' (req, res) => {
+	RandomH()
+			.then(url => {
+				res.send(url)
+			})
+			.catch(err => {
+				res.send(err);
+			})
 })
 
 router.get('/userwp', (req, res) => {
