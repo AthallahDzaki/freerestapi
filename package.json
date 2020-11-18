@@ -8,6 +8,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.21.0",
     "base-64": "^0.1.0",
     "base32": "0.0.6",
     "cookie-parser": "~1.4.4",
@@ -31,7 +32,9 @@
 	"ytdl-core": "^4.0.4",
 	"genius-lyrics": "^4.0.0",
 	"@justalk/pornhub-api": "^3.3.0",
-	"nhentai": "^1.1.1"
+	"nhentai": "^1.1.1",
+	"tiktok-scraper": "^1.4.3",
+	"instatouch": "^2.3.3"
   },
   "devDependencies": {},
   "repository": {
