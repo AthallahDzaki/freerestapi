@@ -23,8 +23,21 @@ const {
 //	Xnxx,
 	RandomP,
 	RandomH,
-	Nhentai
+	Nhentai,
+	Ushort,
+	IG,
+	Cekresi,
+	Gempa,
+	Covid19
+	
 } = require('./../lib')
+
+router.get('/', (req, res) => {
+	res,send({
+		code: 200,
+		message: "Api Is WORKING"
+	});
+})
 
 router.get('/hash-identifier', (req, res) => {
     const hash = req.query.hash
@@ -121,6 +134,45 @@ router.get('/lirik', (req, res) => {
 			.catch(err  => {
 				res.send(err);
 			})
+})
+
+router.get('/covid', (req, res) => {
+	var la = req.query.la;
+	var lo = req.query.lo;
+	if( !la || !lo || la == undefined || lo == undefined)
+		return res.status(200).send({
+			code:200,
+			message:"Please input parameter la and lo"
+		})
+	Covid19(la, lo)
+				.then(data => {
+					res.send(data);
+				})
+				.catch(err => {
+					res.send(err);
+				})
+})
+
+router.get('/ig', (req, res) => {
+	var url = req.query.url || req.query.link;
+	if(!url || url == undefined)
+		return res.status(200).send({
+			code:200,
+			message:"Please input the url params"
+		})
+	IG(url).then(data => {
+		res.send(data);
+	}).catch(err => {
+		res.send(err)
+	})
+})
+
+router.get('/gempa', (req, res) => {
+	Gempa().then(data => {
+		res.send(data);
+	}).catch(err => {
+		res.send(err);
+	})
 })
 
 router.get('/iplookup', (req, res) => {
@@ -386,7 +438,11 @@ router.get('/nulis', (req, res) => {
 router.get('/yt2', (req, res) => {
 	var id = req.query.url || req.query.link;
 	if(!id || id == undefined) 
-        return response.send("{code:400,\nmessage:'Input ID Or Link of Video'}");
+        return response.send(
+		{
+			code:400,
+			message:'Input ID Or Link of Video'
+		});
     if(id.includes("youtube")){
 		urls = id;
 		var r, rx = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/;
@@ -402,18 +458,40 @@ router.get('/yt2', (req, res) => {
 
 router.get('/ph', (req, res) => {
 	const link = req.query.l || req.query.link
+	const pixel = req.query.p
 	if(!link || link == undefined)
 		return res.send({
             code: 200,
             message: 'Input parameter link / l.'
         })
-	Pornhub(link)
+	if(!p || p == undefined)
+		return res.send({
+            code: 200,
+            message: 'Input parameter p (Valid PIXEL 240P, 480P, 720P).'
+        })
+	Pornhub(link, pixel)
 				.then(data => {
 					res.send(data);
 				})
 				.catch(err => {
 					res.send('400\nInternal Server Error');
 				})
+})
+
+router.get('/ushort', (req, res) => {
+	const url = req.query.url || req.query.link;
+	if(!url || url == undefined)
+	return res.send({
+        code: 400,
+        message: 'input parameter url atau link.'
+	})
+	Ushort(url)
+			.then(ress => {
+				res.send(ress)
+			})
+			.catch(err => {
+				res.send(err)
+			})
 })
 
 router.get('/yt', (req, res) => {
