@@ -34,7 +34,9 @@
 	"@justalk/pornhub-api": "^3.3.0",
 	"nhentai": "^1.1.1",
 	"tiktok-scraper": "^1.4.3",
-	"instatouch": "^2.3.3"
+	"instatouch": "^2.3.3",
+	"file-type": "^16.0.1",
+	"form-data": "^3.0.0"
   },
   "devDependencies": {},
   "repository": {
