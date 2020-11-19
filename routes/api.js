@@ -100,7 +100,7 @@ router.get('/nekopoi', (req, res) => {
 	Nekopoi(url)
 				.then(data => {
 					res.send(data);
-				}
+				})
 				.catch(err => {
 					res.send(err);
 				})
