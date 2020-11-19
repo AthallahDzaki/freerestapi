@@ -35,6 +35,10 @@ var title = "Free Rest API | Online API's Tools";
   router.get('/doc/dicoding', (req, res) => {
     res.render('dicoding', {host: process.env.S_HOST, title: title})
   })
+  
+  router.get('/doc/nekopoi', (req, res) => {
+	  res.render('nekopoi', {host: process.env.S_HOST, title: title})
+  })
 
   router.get('/doc/tokped', (req, res) => {
     res.render('tokped', {host: process.env.S_HOST, title: title})
@@ -74,6 +78,18 @@ var title = "Free Rest API | Online API's Tools";
 
   router.get('/doc/KBBI', (req, res) => {
     res.render('KBBI', {host: process.env.S_HOST, title: title})
+  })
+  
+  router.get('/doc/ig', (req, res) => {
+	  res.render('IG', {host: process.env.S_HOST, title: title})
+  })
+  
+  router.get('/doc/cekresi', (req, res) => {
+	  res.render('cekresi', {host: process.env.S_HOST, title: title})
+  })
+  
+  router.get('/doc/gempa', (req, res) => {
+	  res.render('gempa', {host: process.env.S_HOST, title: title})
   })
 
   router.get('/doc/ushort', (req, res) => {

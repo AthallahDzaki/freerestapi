@@ -28,7 +28,9 @@ const {
 	IG,
 	Cekresi,
 	Gempa,
-	Covid19
+	Covid19,
+	Cuaca,
+	Nekopoi
 	
 } = require('./../lib')
 
@@ -86,6 +88,38 @@ router.get('/corona', (req, res) => {
         .catch(err => {
             res.send(err)
         })
+})
+
+router.get('/nekopoi', (req, res) => {
+	var url = req.query.url;
+	if(!url || url == undefined)
+		return res.send({
+			code:400,
+			message:"URL Not Provided"
+		})
+	Nekopoi(url)
+				.then(data => {
+					res.send(data);
+				}
+				.catch(err => {
+					res.send(err);
+				})
+})
+
+router.get('/cuaca', (req, res) => {
+	var lokasi = req.query.p;
+	if(!lokasi || lokasi == undefined)
+		return res.send({
+			code:400,
+			message:"p not found"
+		})
+	Cuaca(lokasi)
+			.then(data => {
+				res.send(data);
+			})
+			.catch(err => {
+				res.send(err);
+			})
 })
 
 router.get('/spam', (req, res) => {

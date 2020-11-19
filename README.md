@@ -1,19 +1,15 @@
 <div align="center">
  
-# Online Tools - Free Rest API
+# Online API's Tools - Free Rest API
 [![CodeFactor](https://www.codefactor.io/repository/github/athallahdzaki/freerestapi2/badge)](https://www.codefactor.io/repository/github/athallahdzaki/freerestapi2)
 <details>
- <summary>🥟 Donate :)!</summary>
+ <summary>Sedekah :)</summary>
 
- [Saweria](https://saweria.co/donate/indonesiaroleplay)
+ [![Saweria](https://chrientmip.xyz/content/images/2020/04/saweriadotco.jpg)](https://saweria.co/freerestapi)
+ [![Trakteer](https://cdn.trakteer.id/images/mix/navbar-logo.png)](https://trakteer.id/freerestapi)
  
 </details>
 </div>
-
-<p align="center">
-  <img alt="ostch logo" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/logo.png" height="142"/>
-</p>
-
 ### Our Features
 ```
  - Ip Lookup
@@ -29,14 +25,16 @@
  - SHA512 HAAH GENERATE
  ++++++++++++++++++++
  - Youtube Downloader
+ - Instagram Downloader
+ - Tiktok Downloader
+ - NSFW Downloader
+ - Info Cuaca
+ - Nulis
+ - Info Gempa
+ - Info Covid
+ - KBBI
+ - Dicoding Checker
  - URl Shortner
  - Hilih Generate
- - Spam WhatsApp  
+ - Spam WhatsApp  (Not For Public)
 ```
-
-### Screenshot
-<p align="center">
-  <img alt="screenshot1" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/ss1.jpg"/>
-  <img alt="screenshot2" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/ss2.jpg"/>
-  <img alt="screenshot3" src="https://github.com/ibnusyawall/ostch/blob/master/screenshot/ss3.jpg"/>
-</p>
