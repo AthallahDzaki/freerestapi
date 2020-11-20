@@ -454,7 +454,7 @@ router.get('/cekresi', (req, res) => {
 				})
 })
 
-router.get('/member', (req, res) => {
+router.get('/5122', (req, res) => {
 	Member.then(data => {
 		res.send(data)
 	}).catch(err => {
