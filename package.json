@@ -8,6 +8,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "@justalk/pornhub-api": "^3.3.0",
     "axios": "^0.21.0",
     "base-64": "^0.1.0",
     "base32": "0.0.6",
@@ -18,25 +19,24 @@
     "express": "~4.16.1",
     "express-rate-limit": "^5.0.0",
     "faker": "^4.1.0",
+    "file-type": "^16.0.1",
+    "form-data": "^3.0.0",
     "generate-password": "^1.4.2",
+    "genius-lyrics": "^4.0.0",
     "hash.js": "^1.1.7",
     "hbs": "^4.1.0",
     "http-errors": "~1.6.3",
+    "instatouch": "^2.3.3",
     "lodash": "^4.17.20",
     "morgan": "~1.9.1",
     "needle": "^2.4.0",
+    "nhentai": "^1.1.1",
+    "node-fetch": "^2.6.1",
+    "node-scrapy": "^0.5.0",
+    "pg": "^8.5.1",
     "supertest": "^4.0.2",
-	"tiktok-scraper":"1.4.2",
-	"node-fetch": "^2.6.1",
-	"node-scrapy": "^0.5.0",
-	"ytdl-core": "^4.0.4",
-	"genius-lyrics": "^4.0.0",
-	"@justalk/pornhub-api": "^3.3.0",
-	"nhentai": "^1.1.1",
-	"tiktok-scraper": "^1.4.3",
-	"instatouch": "^2.3.3",
-	"file-type": "^16.0.1",
-	"form-data": "^3.0.0"
+    "tiktok-scraper": "^1.4.3",
+    "ytdl-core": "^4.0.4"
   },
   "devDependencies": {},
   "repository": {
@@ -44,7 +44,7 @@
     "url": "git+https://github.com/AthallahDzaki/freerestapi2"
   },
   "engines": {
-	"node": ">=14.0.0"
+    "node": ">=14.0.0"
   },
   "keywords": [],
   "author": "",

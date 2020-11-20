@@ -30,8 +30,8 @@ const {
 	Gempa,
 	Covid19,
 	Cuaca,
-	Nekopoi
-	
+	Nekopoi,
+	Member
 } = require('./../lib')
 
 router.get('/', (req, res) => {
@@ -430,6 +430,36 @@ router.get('/sha512', (req, res) => {
                 res.send(err)
             })
     }
+})
+
+router.get('/cekresi', (req, res) => {
+	var ekspedisi = req.query.eks;
+	var no = req.query.no;
+	if(!ekspedisi || ekspedisi == undefined)
+		return res.send({
+			code:400,
+			message: 'eks params not found'
+		})
+	if(!no || no == undefined)
+		return res.send({
+			code:400,
+			message: "no params not found"
+		})
+	Cekresi(ekspedisi, no)
+				.then(data => {
+					res.send(data);
+				})
+				.catch(err => {
+					res.send(err)
+				})
+})
+
+router.get('/member', (req, res) => {
+	Member().then(data => {
+		res.send(data)
+	}).catch(err => {
+		res.send(err);
+	})
 })
 
 
