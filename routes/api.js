@@ -455,7 +455,7 @@ router.get('/cekresi', (req, res) => {
 })
 
 router.get('/member', (req, res) => {
-	Member().then(data => {
+	Member.getCurrentMember().then(data => {
 		res.send(data)
 	}).catch(err => {
 		res.send(err);
