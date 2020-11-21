@@ -1945,28 +1945,3 @@ body.sidebar-toggled footer.sticky-footer {
   background-color: #3f51b5;
   border-color: #3f51b5;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-
-.TypeSpanser{
-  padding: 40px;
-}
-
-#TextForType {
-  white-space: nowrap;
-  overflow: hidden;    
-  font-family: 'Source Code Pro', monospace;  
-  font-size: 28px;
-}
-
-/* Animation */
-#TextForType {
-  animation: animated-text 2s steps(30,end) 1s 1 normal both;
-}
-
-/* text animation */
-
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 472px;}
-}
