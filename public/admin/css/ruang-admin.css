@@ -1963,12 +1963,6 @@ body.sidebar-toggled footer.sticky-footer {
   margin: 0 auto;
 }
 
-/* Animation */
-#TextForType {
-  animation: animated-text 4s steps(29,end) 1s 1 normal both,
-             animated-cursor 600ms steps(29,end) infinite;
-}
-
 /* text animation */
 
 @keyframes animated-text{
