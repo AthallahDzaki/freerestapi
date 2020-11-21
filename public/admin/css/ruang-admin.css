@@ -1950,17 +1950,18 @@ body.sidebar-toggled footer.sticky-footer {
 
 .TypeSpanser{
   padding: 40px;
-  background-color: #121212;  
 }
 
 #TextForType {
-  border-right: solid 3px rgba(0,255,0,.75);
   white-space: nowrap;
   overflow: hidden;    
   font-family: 'Source Code Pro', monospace;  
   font-size: 28px;
-  color: rgba(255,255,255,.70);
-  margin: 0 auto;
+}
+
+/* Animation */
+#TextForType {
+  animation: animated-text 2s steps(30,end) 1s 1 normal both;
 }
 
 /* text animation */
@@ -1968,11 +1969,4 @@ body.sidebar-toggled footer.sticky-footer {
 @keyframes animated-text{
   from{width: 0;}
   to{width: 472px;}
-}
-
-/* cursor animations */
-
-@keyframes animated-cursor{
-  from{border-right-color: rgba(0,255,0,.75);}
-  to{border-right-color: transparent;}
 }
