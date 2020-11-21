@@ -81,7 +81,7 @@ var title = "Free Rest API | Online API's Tools";
   })
   
   router.get('/doc/ig', (req, res) => {
-	  res.render('IG', {host: process.env.S_HOST, title: title})
+	  res.render('ig', {host: process.env.S_HOST, title: title})
   })
   
   router.get('/doc/cekresi', (req, res) => {
