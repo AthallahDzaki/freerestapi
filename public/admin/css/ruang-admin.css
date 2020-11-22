@@ -1945,3 +1945,82 @@ body.sidebar-toggled footer.sticky-footer {
   background-color: #3f51b5;
   border-color: #3f51b5;
 }website visitor
+
+.clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: url("https://i.postimg.cc/hjVspvcJ/clock.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3),
+    inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.clock::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.hour,
+.min,
+.sec {
+  position: absolute;
+}
+
+.hr {
+  width: 160px;
+  height: 160px;
+}
+
+.mn {
+  width: 190px;
+  height: 190px;
+}
+
+.sc {
+  width: 230px;
+  height: 230px;
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+}
+
+.hr::before {
+  content: "";
+  width: 8px;
+  height: 80px;
+  background-color: #ff105e;
+  z-index: 100;
+  border-radius: 5px;
+}
+
+.mn::before {
+  content: "";
+  width: 6px;
+  height: 90px;
+  background-color: rgb(15, 105, 207);
+  z-index: 11;
+  border-radius: 5px;
+}
+
+.sc::before {
+  content: "";
+  width: 2px;
+  height: 140px;
+  background-color: #000000;
+  z-index: 10;
+  border-radius: 5px;
+}
