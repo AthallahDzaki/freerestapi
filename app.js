@@ -4,6 +4,7 @@ var path = require('path')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 var cors = require('cors')
+var Dataset = require('./lib/include/Dataset');
 
 var indexRouter = require('./routes/index')
 var apiRouter   = require('./routes/api')
@@ -20,6 +21,7 @@ app.all('/*', function(req, res, next) {
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
+app.use(Dataset.initialize());
 
 app.use(cors())
 app.use(logger('dev'))
