@@ -104,7 +104,7 @@ function showTime(){
   //putting time in one variable
   var time = h + ":" + m + ":" + s + " " + session;
   //putting time in our div
-  $('#modalCenter').html(time); 
+  $('#Jam').html(time); 
   //to change time in every seconds
   setTimeout( showTime, 1000 );
 }
