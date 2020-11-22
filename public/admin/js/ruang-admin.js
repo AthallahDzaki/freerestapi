@@ -51,6 +51,11 @@
 // Modal Javascript
 
 $(document).ready(function () {
+  $.getJSON("https://freerestapi.herokuapp.com/api/v1/5122", function(result){
+      $.each(result, function(i, field){
+        $("#BanyakPengunjung").html(field);
+      });
+  	});
   $("#myBtn").click(function () {
     $('.modal').modal('show');
   });
