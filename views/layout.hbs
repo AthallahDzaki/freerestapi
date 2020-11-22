@@ -16,7 +16,7 @@
   <title>{{ title }}</title>
   <link href='/admin/vendor/fontawesome-free/css/all.min.css' rel="stylesheet" type="text/css">
   <link href='/admin/vendor/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css">
-  <link href='/admin/css/ruang-admin.min.css' rel="stylesheet" type="text/css">
+  <link href='/admin/css/ruang-admin.css' rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/default.min.css">
   
   <style>
@@ -219,8 +219,10 @@
           </button>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
-              <a id="JamDigital">
-                <span class="ml-2 d-none d-lg-inline text-white small" id="Jam">00:00:00</span>
+              <a class="nav-link dropdown-toggle" href="#" id="JamNav" role="button" data-toggle="modal"
+                aria-haspopup="true" aria-expanded="false">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+                    id="#modalCenter">00:00:00</button>
               </a>
             </li>
             <li class="nav-item dropdown no-arrow mx-1">
@@ -312,7 +314,7 @@
 
     {{{body}}}
 
-<!-- Footer -->
+		<!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
@@ -330,11 +332,42 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
+  
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Jam Digital</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body"id="ClockDiv">
+                 <div class="clock">
+					<div class="hour">
+						<div class="hr" id="hr"></div>
+					</div>
+					<div class="min">
+						<div class="mn" id="mn"></div>
+					</div>
+					<div class="sec">
+						<div class="sc" id="sc"></div>
+					</div>
+				 </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
   <script src="/admin/vendor/jquery/jquery.min.js"></script>
   <script src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="/admin/js/ruang-admin.min.js"></script>
+  <script src="/admin/js/ruang-admin.js"></script>
   <script src="/admin/vendor/chart.js/Chart.min.js"></script>
   <script src="/admin/js/demo/chart-area-demo.js"></script>
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
