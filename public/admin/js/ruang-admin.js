@@ -95,16 +95,13 @@ function showTime(){
      session = "PM";
      }
   
-  if ( h > 12 ){
-    h = h - 12;
-  }
   m = ( m < 10 ) ? m = "0" + m : m;
   s = ( s < 10 ) ? s = "0" + s : s;
   
   //putting time in one variable
   var time = h + ":" + m + ":" + s + " " + session;
   //putting time in our div
-  $('#Jam').html(time); 
+  $('#modalCenter').html(time); 
   //to change time in every seconds
   setTimeout( showTime, 1000 );
 }
