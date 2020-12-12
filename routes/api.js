@@ -498,8 +498,8 @@ router.get('/nulis', (req, res) => {
       })
     } else {
         Nulis(kata, nama, kel)
-            .then(data => {
-                res.send(data)
+            .then(async data => {
+                await res.send(data)
             })
             .catch(err => {
                 res.send(err)
