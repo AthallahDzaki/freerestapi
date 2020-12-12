@@ -303,10 +303,10 @@ router.get('/nhentai', (req, res) => {
 		})
 	Nhentai(d)
 			 .then(url => {
-				 send.res(url);
+				 res.send(url);
 			 })
 			 .catch(err => {
-				 send.res(err);
+				 res.send(err);
 			 })
 })
 
