@@ -488,14 +488,16 @@ router.get('/hilih', (req, res) => {
 })
 
 router.get('/nulis', (req, res) => {
-    const kata = req.query.kata
-    if (!kata) {
+    const kata = req.query.kata || req.query.text
+	const nama = req.query.nama || req.query.name
+	const kel = req.query.kel || req.query.kelas
+    if (!kata || !nama || !kel || kata == undefined || nama == undefined || kel == undefined) {
       res.send({
         code: 400,
         message: 'Pleasee input parameter kata.'
       })
     } else {
-        Nulis(kata)
+        Nulis(kata, nama, kel)
             .then(data => {
                 res.send(data)
             })
