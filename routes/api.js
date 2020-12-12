@@ -31,7 +31,7 @@ const {
 	Covid19,
 	Cuaca,
 	Nekopoi,
-	Member
+	IGStalk
 } = require('./../lib')
 
 router.get('/', (req, res) => {
@@ -195,6 +195,20 @@ router.get('/ig', (req, res) => {
 			message:"Please input the url params"
 		})
 	IG(url).then(data => {
+		res.send(data);
+	}).catch(err => {
+		res.send(err)
+	})
+})
+
+router.get('/igs', (req, res) => {
+	var url = req.query.u || req.query.username;
+	if(!url || url == undefined)
+		return res.status(200).send({
+			code:200,
+			message:"Please input the url params"
+		})
+	IGStalk(url).then(data => {
 		res.send(data);
 	}).catch(err => {
 		res.send(err)
@@ -452,14 +466,6 @@ router.get('/cekresi', (req, res) => {
 				.catch(err => {
 					res.send(err)
 				})
-})
-
-router.get('/5122', (req, res) => {
-	Member().then(data => {
-		res.send(data)
-	}).catch(err => {
-		res.send(err);
-	})
 })
 
 
