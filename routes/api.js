@@ -211,7 +211,7 @@ router.get('/igs', (req, res) => {
 	IGStalk(url).then(data => {
 		res.send(data);
 	}).catch(err => {
-		console.log(err)
+		res.send(err)
 	})
 })
 
