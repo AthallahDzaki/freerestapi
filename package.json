@@ -38,7 +38,8 @@
     "pg": "^8.5.1",
     "supertest": "^4.0.2",
     "tiktok-scraper": "^1.4.3",
-    "ytdl-core": "^4.0.4"
+    "ytdl-core": "^4.0.4",
+	"child_process": "^1.0.2"
   },
   "devDependencies": {},
   "repository": {
