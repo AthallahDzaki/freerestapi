@@ -128,6 +128,14 @@ var title = "Free Rest API | Online API's Tools";
 	  res.render('yt', {host: process.env.S_HOST, title: title});
   })
   
+  router.get('/doc/igs', (req, res) => {
+	  res.render('igs', {host: process.env.S_HOST, title: title});
+  })
+  
+  router.get('/doc/fb', (req, res) => {
+	  res.render('fb', {host: process.env.S_HOST, title: title});
+  })
+  
   router.get('/doc/lirik', (req, res) => {
 	  res.render('lirik', {host: process.env.S_HOST, title: title});
   })

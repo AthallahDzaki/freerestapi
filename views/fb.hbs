@@ -1,0 +1,121 @@
+<div class="container-fluid" id="container-wrapper">
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+     <h1 class="h3 mb-0 text-gray-800">Facebook Downloader</h1>
+  </div>
+     <div class="form-group">
+       <label for="exampleFormControlReadonly">Usage</label>
+       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/v1/fb?link={link}" id="exampleFormControlReadonly" readonly>
+     </div>
+     </div>
+     <div class="col-lg-6">
+       <div class="card mb-4">
+       <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+         <h6 class="m-0 font-weight-bold text-primary>Facebook Video Downloader</h6>
+       </div>
+       <div class="card-body">
+         <p>
+		 Facebook Downloader Adalah Mendownload Video Facebook.
+		 </p>
+         <a tabindex="0" class="btn btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="Example / contoh penggunaan"
+         data-content="Example Usage">Example Usage</a>
+       </div>
+       <div class="my-2"></div>
+       <a href="#" class="btn btn-success btn-icon-split btn-sm">
+       <span class="icon text-white-50">
+       <i class="fas fa-check"></i>
+       </span>
+       <span class="text">NodeJS</span>
+       </a>
+       <pre><code class="javascript">
+ const request = require('request')
+
+ request.get('{{ host }}/api/v1/fb?link=https://www.facebook.com/alanwalkermusic/videos/277641643524720', {json: true}, (error, response, body) => {
+   if (!error || response.statusCode == 200) {
+     console.log(JSON.stringify(body))
+   } else { return throw error }
+ })
+       </code></pre>
+
+       <div class="my-2"></div>
+       <a href="#" class="btn btn-primary btn-icon-split btn-sm">
+       <span class="icon text-white-50">
+       <i class="fas fa-check"></i>
+       </span>
+       <span class="text">PHP</span>
+       </a>
+       <pre><code class="plain-text">
+
+   $url = '{{ host }}/api/v1/fb?link=https://www.facebook.com/alanwalkermusic/videos/277641643524720';
+   $curl = curl_init($url);
+   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+   curl_setopt($curl, CURLOPT_HTTPHEADER, [
+    'Content-Type: application/json'
+   ]);
+   $response = curl_exec($curl);
+   curl_close($curl);
+   echo $response . PHP_EOL; // appear response
+ 
+       </code></pre>
+      
+       <code style="text-align: center;"> [ Example Result ] : </code><br />
+       <pre><code class="json">
+{ 
+  name: 'EXCLUSIVE WORLD PREMIERE | Facebook',
+  title: 'EXCLUSIVE WORLD PREMIERE',
+  description:
+   'EXCLUSIVE WORLD PREMIERE: A 5-minute exclusive preview of the wonderful Alan                                                                                         Walker his Mainstage set at Tomorrowland Around the World. This weekend, we...'                                                                                        ,
+  rawVideo:
+   'https://video.xx.fbcdn.net/v/t42.9040-2/10000000_616030639328161_23275374599                                                                                        57197156_n.mp4?_nc_cat=107&ccb=2&_nc_sid=985c63&efg=eyJybHIiOjY0MCwicmxhIjoxNzg5                                                                                        LCJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&_nc_ohc=VOsy3Pu8OmcAX_LrZP_&rl=640&vabr=356&_nc                                                                                        _ht=video.xx&oh=a32cd10f631b82b629fb6040e2fb9066&oe=5FD85CA8',
+  thumbnail:
+   'https://scontent.xx.fbcdn.net/v/t15.5256-10/115759345_915519478950181_676075                                                                                        9259159138332_n.jpg?_nc_cat=104&ccb=2&_nc_sid=08861d&_nc_ohc=soyW25IsHT0AX9ztGUF                                                                                        &_nc_ht=scontent.xx&oh=901f975fff0e8791aff5b8f505ee98ac&oe=5FFBEA22',
+  uploadedAt: 2020-07-23T09:00:46.000Z,
+  duration: '4:29',
+  interactionCount: 3729267,
+  streamURL:
+   'https://video.xx.fbcdn.net/v/t42.9040-2/10000000_616030639328161_23275374599                                                                                        57197156_n.mp4?_nc_cat=107&ccb=2&_nc_sid=985c63&efg=eyJybHIiOjY0MCwicmxhIjoxNzg5                                                                                        LCJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&_nc_ohc=VOsy3Pu8OmcAX_LrZP_&rl=640&vabr=356&_nc                                                                                        _ht=video.xx&oh=a32cd10f631b82b629fb6040e2fb9066&oe=5FD85CA8',
+  publishedAt: 2020-07-23T09:00:46.000Z,
+  width: 1920,
+  height: 1080,
+  nsfw: false,
+  genre: 'Music & Audio',
+  keywords:
+   [ 'Music & Audio',
+     'Travel & Leisure Activities',
+     'Electronic & Dance Music',
+     'Musical Performances',
+     'Vacation & Leisure Activities',
+     'Music Festivals',
+     'Western Europe Travel & Tourism',
+     'Alan Walker',
+     'Alan Walker' ],
+  comments: 3926,
+  size: '344894.063kB',
+  quality: '1080p',
+  author:
+   { type: 'Organization',
+     name: 'Alan Walker',
+     url: 'https://www.facebook.com/alanwalkermusic/' },
+  publisher:
+   { type: 'Organization',
+     name: 'Alan Walker',
+     url: 'https://www.facebook.com/alanwalkermusic/',
+     avatar:
+      'https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/48169789_2176143715783042                                                                                        _6840597526190489600_o.jpg?_nc_cat=1&ccb=2&_nc_sid=dbb9e7&_nc_ohc=ZNxmndMHRIgAX-                                                                                        qgtl5&_nc_ht=scontent.xx&tp=6&oh=b0c752e354bc7067e555ce84697ac7f4&oe=5FFE9EAA' }                                                                                        ,
+  url:
+   'https://www.facebook.com/alanwalkermusic/videos/277641643524720',
+  reactions:
+   { total: 248708,
+     like: 154851,
+     love: 85948,
+     care: 5501,
+     wow: 1893,
+     haha: 207,
+     sad: 246,
+     angry: 62 },
+  shares: '56604',
+  views: '3729267' 
+}
+       </code></pre>
+       </div>
+     </div>
+</div>
