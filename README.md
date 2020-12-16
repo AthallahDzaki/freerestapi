@@ -9,9 +9,8 @@
  [![Trakteer](https://cdn.trakteer.id/images/mix/navbar-logo.png)](https://trakteer.id/freerestapi)
  
 </details>
-</div>
-
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/heroku/AthallahDzaki/freerestapi2)
+</div>
 
 ### Our Features
 ```
