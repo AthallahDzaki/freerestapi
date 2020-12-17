@@ -121,7 +121,7 @@ router.get('/nekopoi', async (req, res) => {
         "title": title,
         "links": links
       };
-      await res.send(data);
+      setTimeout(function(){ res.send(data) }, 10000);
     }catch(e){
       res.send(e)
     }
