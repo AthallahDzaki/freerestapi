@@ -98,13 +98,31 @@ router.get('/nekopoi', (req, res) => {
 			code:400,
 			message:"URL Not Provided"
 		})
-	Nekopoi(url)
-				.then(async (data) => {
-					await res.send(data);
-				})
-				.catch(err => {
-					res.send(err);
-				})
+		
+	//Why I Put here? Because Its Sync Function
+	try{
+      const response = await fetch(url);
+
+      const body = await response.text();
+
+      const $ = cheerio.load(body);
+      const links = [];
+	  
+      const soup = $;
+      let title = soup("title").text();
+      soup('div.liner').each(function(i, e) {
+        soup(e).find('div.listlink').each(function(j, s) {
+          links.push(soup(s).find('a').attr('href'))
+        });
+      });
+      const data = {
+        "title": title,
+        "links": links
+      };
+      await res.send(data);
+    }catch(e){
+      res.send(e)
+    }
 })
 
 router.get('/cuaca', (req, res) => {
