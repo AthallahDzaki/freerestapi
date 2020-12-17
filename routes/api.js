@@ -99,8 +99,8 @@ router.get('/nekopoi', (req, res) => {
 			message:"URL Not Provided"
 		})
 	Nekopoi(url)
-				.then(data => {
-					res.send(data);
+				.then(async (data) => {
+					await res.send(data);
 				})
 				.catch(err => {
 					res.send(err);
