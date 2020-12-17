@@ -91,40 +91,8 @@ router.get('/corona', (req, res) => {
         })
 })
 
-router.get('/nekopoi', async (req, res) => {
-	var url = req.query.url;
-	if(!url || url == undefined)
-		return res.send({
-			code:400,
-			message:"URL Not Provided"
-		})
-		
-	//Why I Put here? Because Its Sync Function
-	try{
-	  const fetch = require('node-fetch');
-	  const cheerio = require('cheerio');
-      const response = await fetch(url);
-
-      const body = await response.text();
-
-      const $ = cheerio.load(body);
-      const links = [];
-	  
-      const soup = $;
-      let title = soup("title").text();
-      soup('div.liner').each(function(i, e) {
-        soup(e).find('div.listlink').each(function(j, s) {
-          links.push(soup(s).find('a').attr('href'))
-        });
-      });
-      const data = {
-        "title": title,
-        "links": links
-      };
-      setTimeout(function(){ res.send(data) }, 10000);
-    }catch(e){
-      res.send(e)
-    }
+router.get('/nekopoi', (req, res) => {
+	res.send("Nekopoi Discontinued, Im Sorry, For Source See On /lib/utils/nekopoi.js, its work with local scraping");
 })
 
 router.get('/cuaca', (req, res) => {
