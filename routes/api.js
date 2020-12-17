@@ -91,7 +91,7 @@ router.get('/corona', (req, res) => {
         })
 })
 
-router.get('/nekopoi', (req, res) => {
+router.get('/nekopoi', async (req, res) => {
 	var url = req.query.url;
 	if(!url || url == undefined)
 		return res.send({
@@ -101,6 +101,8 @@ router.get('/nekopoi', (req, res) => {
 		
 	//Why I Put here? Because Its Sync Function
 	try{
+	  const fetch = require('node-fetch');
+	  const cheerio = require('cheerio');
       const response = await fetch(url);
 
       const body = await response.text();
