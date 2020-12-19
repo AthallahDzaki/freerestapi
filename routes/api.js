@@ -158,7 +158,7 @@ router.get('/lirik', (req, res) => {
 				res.send(err);
 			})
 })
-
+/*
 router.get('/brainly', (req, res) => {
 	var ask = req.query.ask || req.query.a || req.query.p;
 	var c   = req.query.c || req.query.count || req.query.j;
@@ -174,7 +174,7 @@ router.get('/brainly', (req, res) => {
 				.catch(err => {
 					res.send(err);
 				})
-})
+})*/
 
 router.get('/covid', (req, res) => {
 	var la = req.query.la;
