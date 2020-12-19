@@ -159,6 +159,23 @@ router.get('/lirik', (req, res) => {
 			})
 })
 
+router.get('/brainly', (req, res) => {
+	var ask = req.query.ask || req.query.a || req.query.p;
+	var c   = req.query.c || req.query.count || req.query.j;
+	if(!ask || ask == undefined || !c || c == undefined)
+		return res.status(200).send({
+			code:200,
+			message:"Please input parameter a and c";
+		})
+	Brainly(ask, c)
+				.then(data => {
+					res.send(data)
+				})
+				.catch(err => {
+					res.send(err);
+				})
+})
+
 router.get('/covid', (req, res) => {
 	var la = req.query.la;
 	var lo = req.query.lo;
