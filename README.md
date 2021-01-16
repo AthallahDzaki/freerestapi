@@ -1,7 +1,7 @@
 <div align="center">
  
 # Online API's Tools - Free Rest API
-[![CodeFactor](https://www.codefactor.io/repository/github/athallahdzaki/freerestapi2/badge)](https://www.codefactor.io/repository/github/athallahdzaki/freerestapi2)
+[![CodeFactor](https://www.codefactor.io/repository/github/athallahdzaki/freerestapi/badge)](https://www.codefactor.io/repository/github/athallahdzaki/freerestapi)
 <details>
  <summary>Sedekah :)</summary>
 
