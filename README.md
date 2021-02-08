@@ -44,3 +44,11 @@
 ### Athallah Dzaki
 
 Real Branch / Repo : https://github.com/AthallahDzaki/l
+
+```
+How To Run On Localhost
+- git clone https://github.com/AthallahDzaki/freerestapi
+- cd freerestapi
+- npm i
+- npm start
+```
