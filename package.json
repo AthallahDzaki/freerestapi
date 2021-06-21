@@ -30,7 +30,7 @@
     "instatouch": "^2.3.3",
     "lodash": "^4.17.20",
     "moment-timezone": "^0.5.32",
-    "morgan": "~1.9.1",
+    "morgan": "~1.10.0",
     "needle": "^2.4.0",
     "nhentai": "^1.1.1",
     "node-fetch": "^2.6.1",
