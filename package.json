@@ -10,7 +10,7 @@
   "dependencies": {
     "@justalk/pornhub-api": "^3.3.0",
     "axios": "^0.21.0",
-    "base-64": "^0.1.0",
+    "base-64": "^1.0.0",
     "base32": "0.0.6",
     "cheerio": "^1.0.0-rc.3",
     "cookie-parser": "~1.4.4",
