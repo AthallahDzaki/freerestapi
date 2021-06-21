@@ -26,7 +26,7 @@
     "genius-lyrics": "^4.0.0",
     "hash.js": "^1.1.7",
     "hbs": "^4.1.0",
-    "http-errors": "~1.6.3",
+    "http-errors": "~1.8.0",
     "instatouch": "^2.3.3",
     "lodash": "^4.17.20",
     "moment-timezone": "^0.5.32",
