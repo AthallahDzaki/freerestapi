@@ -1,5 +1,6 @@
 # Directory module
 node_modules/
+debug/
 
 # lock file
 package-lock.json

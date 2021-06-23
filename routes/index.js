@@ -139,9 +139,17 @@ var title = "Free Rest API | Online API's Tools";
   router.get('/doc/lirik', (req, res) => {
 	  res.render('lirik', {host: process.env.S_HOST, title: title});
   })
+  
+  router.get('/doc/ttscl', (req, res) => {
+	  res.render('ttscl', {host: process.env.S_HOST, title: title});
+  })
+  
+  router.get('/doc/filmapik', (req, res) => {
+	  res.render('filmapik', {host: process.env.S_HOST, title: title})
+  })
 
   router.get('/about', (req, res) => {
-    res.render('about', {host: process.env.S_HOST, title: "about | Free Rest API"})
+    res.render('about', {layout: false});
   })
 
 module.exports = router

@@ -4,8 +4,8 @@
   </div>
      <div class="form-group">
        <label for="exampleFormControlReadonly">Usage</label>
-       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/v1/yt?url={ url }" id="exampleFormControlReadonly" readonly>
-	   <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/v1/yt2?url={ url }" id="exampleFormControlReadonly" readonly>
+       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/yt?url={ url }" id="exampleFormControlReadonly" readonly>
+	   <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/yt2?url={ url }" id="exampleFormControlReadonly" readonly>
      </div>
      </div>
      <div class="col-lg-6">
@@ -30,7 +30,7 @@
        <pre><code class="javascript">
  const request = require('request')
 
- request.get('{{ host }}/api/v1/yt?url=https://www.youtube.com/watch?v=dhYOPzcsbGM', {json: true}, (error, response, body) => {
+ request.get('{{ host }}/api/yt?url=https://www.youtube.com/watch?v=dhYOPzcsbGM', {json: true}, (error, response, body) => {
    if (!error || response.statusCode == 200) {
      console.log(JSON.stringify(body))
    } else { return throw error }
@@ -46,7 +46,7 @@
        </a>
        <pre><code class="plain-text">
 
-   $url = '{{ host }}/api/v1/yt?url=https://www.youtube.com/watch?v=dhYOPzcsbGM';
+   $url = '{{ host }}/api/yt?url=https://www.youtube.com/watch?v=dhYOPzcsbGM';
    $curl = curl_init($url);
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
    curl_setopt($curl, CURLOPT_HTTPHEADER, [

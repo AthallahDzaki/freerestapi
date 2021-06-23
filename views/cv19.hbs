@@ -4,8 +4,8 @@
   </div>
      <div class="form-group">
        <label for="exampleFormControlReadonly">Usage</label>
-       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/v1/corona" id="exampleFormControlReadonly" readonly>
-	   <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/v1/covid?la={latitude}&lo={longtitude}" id="exampleFormControlReadonly" readonly>
+       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/corona" id="exampleFormControlReadonly" readonly>
+	   <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/covid?la={latitude}&lo={longtitude}" id="exampleFormControlReadonly" readonly>
      </div>
      </div>
      <div class="col-lg-6">
@@ -32,7 +32,7 @@
        <pre><code class="javascript">
  const request = require('request')
 
- request.get('{{ host }}/api/v1/corona', (error, response, body) => {
+ request.get('{{ host }}/api/corona', (error, response, body) => {
    if (!error || response.statusCode == 200) {
      console.log(body)
    } else { return throw error }
@@ -48,7 +48,7 @@
        </a>
        <pre><code class="plain-text">
 
-   $url = '{{ host }}/api/v1/corona';
+   $url = '{{ host }}/api/corona';
    $curl = curl_init($url);
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
    curl_setopt($curl, CURLOPT_HTTPHEADER, [

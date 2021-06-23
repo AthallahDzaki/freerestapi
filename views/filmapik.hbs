@@ -1,0 +1,111 @@
+<div class="container-fluid" id="container-wrapper">
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+     <h1 class="h3 mb-0 text-gray-800">FILM APIK</h1>
+  </div>
+     <div class="form-group">
+       <label for="exampleFormControlReadonly">Usage</label>
+       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/filmapik?mode={mode}&data={movie}" id="exampleFormControlReadonly" readonly>
+     </div>
+     </div>
+     <div class="col-lg-6">
+       <div class="card mb-4">
+       <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+         <h6 class="m-0 font-weight-bold text-primary">Film Apik</h6>
+       </div>
+       <div class="card-body">
+         <p>API ini digunakan untuk mendapatkan data film dari Film Apik.</p>
+		 <br>
+		 <p> List Mode </p>
+		 <p> 1. search - Need data </p>
+		 <p> 2. latest </p>
+		 <p> 3. country - Need data </p>
+		 <p> 4. category - Need data </p>
+       </div>
+       <div class="my-2"></div>
+       <a href="#" class="btn btn-success btn-icon-split btn-sm">
+       <span class="icon text-white-50">
+       <i class="fas fa-check"></i>
+       </span>
+       <span class="text">NodeJS</span>
+       </a>
+       <pre><code class="javascript">
+ const request = require('request')
+
+ request.get('{{ host }}/api/filmapik?mode=search&data=Wreck-It Ralph', {json: true}, (error, response, body) => {
+   if (!error || response.statusCode == 200) {
+     console.log(JSON.stringify(body))
+   } else { return throw error }
+ })
+       </code></pre>
+
+       <div class="my-2"></div>
+       <a href="#" class="btn btn-primary btn-icon-split btn-sm">
+       <span class="icon text-white-50">
+       <i class="fas fa-check"></i>
+       </span>
+       <span class="text">PHP</span>
+       </a>
+       <pre><code class="plain-text">
+
+   $url = '{{ host }}/api/filmapik?mode=search&data=Wreck-It Ralph';
+   $curl = curl_init($url);
+   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+   curl_setopt($curl, CURLOPT_HTTPHEADER, [
+    'Content-Type: application/json'
+   ]);
+   $response = curl_exec($curl);
+   curl_close($curl);
+   echo $response . PHP_EOL; // appear response
+ 
+       </code></pre>
+      
+       <code style="text-align: center;"> [ Example Result ] : </code><br />
+       <pre><code class="json">
+{
+  "result": [
+    {
+      "title": "Wreck-It Ralph (2012)",
+      "thumbnailPotrait": "https://m.media-amazon.com/images/M/MV5BNzMxNTExOTkyMF5BMl5BanBnXkFtZTcwMzEyNDc0OA@@._V1_SX300.jpg",
+      "rating": "7.7",
+      "quality": "Bluray",
+      "movieId": "16867",
+      "detail": {
+        "trailer": "https://www.youtube.com/embed/JPSQOomMWro",
+        "views": "14114",
+        "genre": "Adventure, Animation, Comedy, Family",
+        "director": "Rich Moore",
+        "actors": "Jack McBrayer, Jane Lynch, John C. Reilly, Sarah Silverman",
+        "country": "USA",
+        "duration": "101 min",
+        "release": " 2012",
+        "thumbnailLandscape": "https://image.tmdb.org/t/p/w780/1LbX3KV6qv6NoH4zKLGM7Sgtwmg.jpg",
+        "description": "\nWreck-It Ralph is the 9-foot-tall, 643-pound villain of an arcade video game named Fix-It Felix Jr., in which the game’s titular hero fixes buildings that Ralph destroys. Wanting to prove he can be a good guy and not just a villain, Ralph escapes his game and lands in Hero’s Duty, a first-person shooter where he helps the game’s hero battle against alien invaders. He later enters Sugar Rush, a kart racing game set on tracks made of candies, cookies and other sweets. There, Ralph meets Vanellope von Schweetz who has learned that her game is faced with a dire threat that could affect the entire arcade, and one that Ralph may have inadvertently started."
+      }
+    },
+    {
+      "title": "Ralph Breaks the Internet (2018)",
+      "thumbnailPotrait": "https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg",
+      "rating": "7.5",
+      "quality": "Bluray",
+      "movieId": "104596",
+      "detail": {
+        "trailer": "https://www.youtube.com/embed/_BcYBFC6zfY",
+        "views": "37179",
+        "genre": "Animation, Box Office, Comedy, Family",
+        "director": "Phil Johnston, Rich Moore",
+        "actors": "Gal Gadot, John C. Reilly, Sarah Silverman, Taraji P. Henson",
+        "country": "USA",
+        "duration": "112 min",
+        "release": " 2018",
+        "thumbnailLandscape": "https://image.tmdb.org/t/p/w780/lpK3wZjjFFUhWlXUPPr2wvInl24.jpg",
+        "description": "\nSix years after the events of “Wreck-It Ralph,” Ralph and Vanellope, now friends, discover a wi-fi router in their arcade, leading them into a new adventure."
+      }
+    }
+  ],
+  "length": "2",
+  "page": "1"
+}
+       </code></pre>
+       </div>
+     </div>
+</div>

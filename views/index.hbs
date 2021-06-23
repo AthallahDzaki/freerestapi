@@ -4,33 +4,86 @@
     <p class="lead text-gray-800 mx-auto" id="TextForType">Online APi's Tools</p>
     <!--<a href="">&larr; by ibnusyawall</a>-->
   </div>
+  <div class="row mb-3">
+    <div class="col-xl-3 col-md-6 mb-4">
+	  <div class="card h-100">
+		<div class="card-body">
+		  <div class="row no-gutters align-items-center">
+			<div class="col mr-2">
+			  <div class="text-xs font-weight-bold text-uppercase mb-1">Total Visitor</div>
+			  <div id='visitor' class="h5 mb-0 mr-3 font-weight-bold text-gray-800">0</div>
+			</div>
+			<div class="col-auto">
+			  <i class="fas fa-users fa-2x text-info"></i>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<div class="col-xl-3 col-md-6 mb-4">
+	  <div class="card h-100">
+		<div class="card-body">
+		  <div class="row no-gutters align-items-center">
+			<div class="col mr-2">
+			  <div class="text-xs font-weight-bold text-uppercase mb-1">Total API</div>
+			  <div id='TotalAPI' class="h5 mb-0 mr-3 font-weight-bold text-gray-800">35</div>
+			</div>
+			<div class="col-auto">
+			  <i class="fas fa-book fa-2x text-info"></i>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<div class="col-xl-3 col-md-6 mb-4">
+	   <div class="card h-100">
+		 <div class="card-body">
+		   <div class="row no-gutters align-items-center">
+			<div class="col mr-2">
+			  <div class="text-xs font-weight-bold text-uppercase mb-1">Total API Usage</div>
+			  <div id='apiusage' class="h5 mb-0 mr-3 font-weight-bold text-gray-800">0</div>
+			</div>
+			<div class="col-auto">
+			  <i class="fas fa-book fa-2x text-info"></i>
+			</div>
+		  </div>
+		 </div>
+	   </div>
+	</div>
+  </div>
   <br><pre><code class="text-plain">
     [ Activity Logs ] :
-
-    [31/12/2019] : Free Rest API is Finishing
-    [04/01/2020] : Add Encrypt Tools
-    [18/01/2020] : Add Hilih Generator
-    [20/01/2020] : Add Spam WhatsApp
-    [23/01/2020] : Add Get Movie Link
-    [16/05/2020] : Remove Get Movie Link
-    [18/05/2020] : Add Corona Info Indonesia
-    [28/05/2020] : Add Dicoding Email Checker
-    [18/06/2020] : Add Hash Identifier
-    [16/11/2020] : Penambahan Tiktok Downloader
-    [16/11/2020] : Penambahan Youtube Downloader
-    [16/11/2020] : Penambahan Nulis
-    [16/11/2020] : Penambahan KBBI
-    [17/11/2020] : Penambahan NHentai Finder
-    [17/11/2020] : Penambahan Random Hentai
-    [17/11/2020] : Penambahan Random Porn
-    [17/11/2020] : Penambahan Pornhub Scraper
-    [17/11/2020] : Penambahan Random Porn
-    [19/11/2020] : Penambahan Info Cuaca
-    [19/11/2020] : Pembenahan Nulis
-    [19/11/2020] : Penambahan Covid Checker
-    [19/11/2020] : Penambahan Url Shortner
+    [06/23/2021] : Penambahan Film Apik
+    [06/23/2021] : Penambahan TTS Cak lontong
+    [06/23/2021] : Penambahan Tiktok NO WM
     [19/11/2020] : Penambahan Info Gempa
-    [19/11/2020] : Penambahan Nekopoi Finder
+    [19/11/2020] : Penambahan Url Shortner
+    [19/11/2020] : Penambahan Covid Checker
+    [19/11/2020] : Pembenahan Nulis
+    [19/11/2020] : Penambahan Info Cuaca
+    [16/11/2020] : Penambahan KBBI
+    [16/11/2020] : Penambahan Nulis
+    [16/11/2020] : Penambahan Youtube Downloader
+    [16/11/2020] : Penambahan Tiktok Downloader
+    [18/06/2020] : Add Hash Identifier	
+    [28/05/2020] : Add Dicoding Email Checker
+    [18/05/2020] : Add Corona Info Indonesia
+    [16/05/2020] : Remove Get Movie Link
+    [23/01/2020] : Add Get Movie Link
+    [20/01/2020] : Add Spam WhatsApp	
+    [18/01/2020] : Add Hilih Generator	
+    [04/01/2020] : Add Encrypt Tools
+    [31/12/2019] : Free Rest API is Finishing
 
   </code><pre>
 </div>
+<script>
+	function visitors(response) {
+		document.getElementById('visitor').innerText = response.value;
+	}
+	function apiusage(response) {
+		document.getElementById('apiusage').innerText = response.value;
+	}
+</script>
+<script async src="https://api.countapi.xyz/hit/freerestapi.herokuapp.com/visits?callback=visitors"></script>
+<script async src="https://api.countapi.xyz/hit/freerestapi.herokuapp.com/apiusage?callback=apiusage"></script>

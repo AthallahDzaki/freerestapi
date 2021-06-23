@@ -4,7 +4,7 @@
   </div>
      <div class="form-group">
        <label for="exampleFormControlReadonly">Usage</label>
-       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/v1/hash-identifier?hash={yourhash}" id="exampleFormControlReadonly" readonly>
+       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/hash-identifier?hash={yourhash}" id="exampleFormControlReadonly" readonly>
      </div>
      </div>
      <div class="col-lg-6">
@@ -29,7 +29,7 @@
        <pre><code class="javascript">
  const request = require('request')
 
- request.get('{{ host }}/api/v1/hash-identifier?hash=5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', {json: true}, (error, response, body) => {
+ request.get('{{ host }}/api/hash-identifier?hash=5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', {json: true}, (error, response, body) => {
    if (!error || response.statusCode == 200) {
      console.log(JSON.stringify(body))
    } else { return throw error }
@@ -45,7 +45,7 @@
        </a>
        <pre><code class="plain-text">
 
-   $url = '{{ host }}/api/v1/hash-identifier?hash=5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8';
+   $url = '{{ host }}/api/hash-identifier?hash=5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8';
    $curl = curl_init($url);
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
    curl_setopt($curl, CURLOPT_HTTPHEADER, [

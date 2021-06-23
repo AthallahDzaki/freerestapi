@@ -4,7 +4,7 @@
   </div>
      <div class="form-group">
        <label for="exampleFormControlReadonly">Usage</label>
-       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/v1/cuaca?p={kota/daerah}" id="exampleFormControlReadonly" readonly>
+       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/cuaca?p={kota/daerah}" id="exampleFormControlReadonly" readonly>
      </div>
      </div>
      <div class="col-lg-6">
@@ -29,7 +29,7 @@
        <pre><code class="javascript">
  const request = require('request')
 
- request.get('{{ host }}/api/v1/cuaca?p=Malang', (error, response, body) => {
+ request.get('{{ host }}/api/cuaca?p=Malang', (error, response, body) => {
    if (!error || response.statusCode == 200) {
      console.log(body)
    } else { return throw error }
@@ -45,7 +45,7 @@
        </a>
        <pre><code class="plain-text">
 
-   $url = '{{ host }}/api/v1/cuaca?p=Malang';
+   $url = '{{ host }}/api/cuaca?p=Malang';
    $curl = curl_init($url);
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
    curl_setopt($curl, CURLOPT_HTTPHEADER, [
