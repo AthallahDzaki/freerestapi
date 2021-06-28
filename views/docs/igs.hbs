@@ -1,0 +1,82 @@
+<div class="container-fluid" id="container-wrapper">
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+     <h1 class="h3 mb-0 text-gray-800">Instagram Stalking</h1>
+  </div>
+     <div class="form-group">
+       <label for="exampleFormControlReadonly">Usage</label>
+       <input class="form-control" type="text" placeholder="[GET] {{ host }}/api/igs?u={ username }" id="exampleFormControlReadonly" readonly>
+     </div>
+     </div>
+     <div class="col-lg-6">
+       <div class="card mb-4">
+       <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+         <h6 class="m-0 font-weight-bold text-primary">Instagram Stalking</h6>
+       </div>
+       <div class="card-body">
+         <p>Instagram Stalking Adalah mengetahui jumlah follower, bio, profile, dan banyak lagi dari Instagram seseorang.</p>
+         <a tabindex="0" class="btn btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="Example / contoh penggunaan"
+         data-content="Example Usage">Example Usage</a>
+       </div>
+
+
+       <div class="my-2"></div>
+       <a href="#" class="btn btn-success btn-icon-split btn-sm">
+       <span class="icon text-white-50">
+       <i class="fas fa-check"></i>
+       </span>
+       <span class="text">NodeJS</span>
+       </a>
+       <pre><code class="javascript">
+ const request = require('request')
+
+ request.get('{{ host }}/api/igs?u=athallah_dzaki', {json: true}, (error, response, body) => {
+   if (!error || response.statusCode == 200) {
+     console.log(JSON.stringify(body))
+   } else { return throw error }
+ })
+       </code></pre>
+
+       <div class="my-2"></div>
+       <a href="#" class="btn btn-primary btn-icon-split btn-sm">
+       <span class="icon text-white-50">
+       <i class="fas fa-check"></i>
+       </span>
+       <span class="text">PHP</span>
+       </a>
+       <pre><code class="plain-text">
+
+   $url = '{{ host }}/api/igs?u=athallah_dzaki';
+   $curl = curl_init($url);
+   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+   curl_setopt($curl, CURLOPT_HTTPHEADER, [
+    'Content-Type: application/json'
+   ]);
+   $response = curl_exec($curl);
+   curl_close($curl);
+   echo $response . PHP_EOL; // appear response
+ 
+       </code></pre>
+      
+       <code style="text-align: center;"> [ Example Result ] : </code><br />
+       <pre><code class="json">
+{
+  "code": 200,
+  "data": {
+    "profile": "https://scontent-iad3-1.cdninstagram.com/v/t51.2885-19/s150x150/104063609_3141607135953700_8522907043940537363_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=tY8nMIDhgWIAX-2sZ_U&tp=1&oh=9483ac9f21a55960c41c28a7c8bb742d&oe=600326DE",
+    "profilehd": "https://scontent-iad3-1.cdninstagram.com/v/t51.2885-19/s320x320/104063609_3141607135953700_8522907043940537363_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=tY8nMIDhgWIAX-2sZ_U&tp=1&oh=4bab7eaeb703262d23037260afc3c3fa&oe=6002F94B",
+    "fullname": "Athallah Dzaki",
+    "private": false,
+    "verified": false,
+    "bio": "بسم الله الرحمن الرحيم.\nDev at @indonesiaroleplay.",
+    "follower": 378,
+    "conneted_fb": null,
+    "videotimeline": 0,
+    "timelime": 4,
+    "savedmedia": 0,
+    "collections": 0
+  }
+}
+       </code></pre>
+       </div>
+     </div>
+</div>

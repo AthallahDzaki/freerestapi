@@ -1,0 +1,167 @@
+<html>
+<head>
+	<title> About Me | Free Rest API </title>
+	<link href="/admin/img/logo/icon.ico" rel="icon">
+	<style>
+	*{
+	  margin: 0;
+	  padding: 0;
+	  font-family: "Ubuntu", sans-serif;
+	  box-sizing: border-box;
+	  text-decoration: none;
+	}
+
+	body{
+	  height: 100vh;
+	  background: url(https://fadzrinmadu.github.io/hosted-assets/amazing-profile-card-using-only-html-and-css/bg.jpg) no-repeat center;
+	  background-size: cover;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+
+	.profile-card{
+	  width: 400px;
+	  text-align: center;
+	  border-radius: 8px;
+	  overflow: hidden;
+	}
+
+	.card-header{
+	  background: #2c3a47;
+	  padding: 60px 40px;
+	}
+
+	.pic{
+	  display: inline-block;
+	  padding: 8px;
+	  background: linear-gradient(130deg, #74b9ff, #e66767);
+	  margin: auto;
+	  border-radius: 50%;
+	  background-size: 200% 200%;
+	  animation: animated-gradient 2s linear infinite;
+	}
+
+	@keyframes animated-gradient{
+	  25%{
+		background-position: left bottom;
+	  }
+	  50%{
+		background-position: right bottom;
+	  }
+	  75%{
+		background-position: right top;
+	  }
+	  100%{
+		background-position: left top;
+	  }
+	}
+
+	.pic img{
+	  display: block;
+	  width: 100px;
+	  height: 100px;
+	  border-radius: 50%;
+	}
+
+	.name{
+	  color: #f2f2f2;
+	  font-size: 28px;
+	  font-weight: 600;
+	  margin: 10px 0;
+	}
+
+	.desc{
+	  font-size: 18px;
+	  color: #e66767;
+	}
+
+	.sm{
+	  display: flex;
+	  justify-content: center;
+	  margin: 20px 0;
+	}
+
+	.sm a{
+	  color: #f2f2f2;
+	  width: 56px;
+	  font-size: 22px;
+	  transition: .3s linear;
+	}
+
+	.sm a:hover{
+	  color: #e66767;
+	}
+
+	.contact-btn{
+	  display: inline-block;
+	  padding: 12px 50px;
+	  color: #e66767;
+	  border: 2px solid #e66767;
+	  border-radius: 6px;
+	  margin-top: 16px;
+	  transition: .3s linear;
+	}
+
+	.contact-btn:hover{
+	  background: #e66767;
+	  color: #f2f2f2;
+	}
+
+	.card-footer{
+	  background: #f4f4f4;
+	  padding: 60px 10px;
+	}
+
+	.numbers{
+	  display: flex;
+	  align-items: center;
+	}
+
+	.item{
+	  flex: 1;
+	  text-transform: uppercase;
+	  font-size: 13px;
+	  color: #e66767;
+	}
+
+	.item span{
+	  display: block;
+	  color: #2c3a47;
+	  font-size: 30px;
+	}
+
+	.border{
+	  width: 1px;
+	  height: 30px;
+	  background: #bbb;
+	}
+
+	</style>
+	<script src="https://kit.fontawesome.com/11e028277f.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href='/admin/css/ruang-admin.css' rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/default.min.css">
+</head>
+<body>
+	<div class="profile-card">
+		<div class="card-header">
+			<div class="pic">
+				<img src="https://avatars.githubusercontent.com/u/44716687?v=4" alt="Athallah Dzaki Image">
+			</div>
+			<div class="name">Athallah Dzaki</div>
+			<div class="desc">Developer</div>
+			<div class="sm">
+				<a href="https://www.facebook.com/profile.php?id=100004876217479" class="fab fa-facebook-f"></a>
+				<a href="https://github.com/AthallahDzaki" class="fab fa-github"></a>
+				<a href="https://www.youtube.com/c/AthallahDzaki" class="fab fa-youtube"></a>
+				<a href="https://wa.me/6281332504194" class="fab fa-whatsapp"></a>
+			</div>
+			<a href="mailto:athallahdzaki@gmail.com" class="contact-btn">Contact Me</a>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

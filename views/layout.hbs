@@ -1,0 +1,355 @@
+
+<html lang="en">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Online Tools APi's, beragam api yang telah kami sediakan untuk kamu">
+  <meta name="author" content="Athallah Dzaki">
+  <meta property="og:image" content="{{ host }}/admin/img/logo/logo3.png" >
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="653">
+  <meta property="og:image:height" content="366">
+  <meta property="og:site_name" content="Free Rest API" >
+  <link href="{{ host }}/admin/img/logo/icon.ico" rel="icon">
+  <title>{{ title }}</title>
+  <link href='/admin/vendor/fontawesome-free/css/all.min.css' rel="stylesheet" type="text/css">
+  <link href='/admin/vendor/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css">
+  <link href='/admin/css/ruang-admin.min.css' rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/default.min.css">
+  <!-- Global site tag (gtag.js) - Google Analytics --> <!-- Dont Forget To Change It -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-64Q7LHVKM6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-64Q7LHVKM6');
+  </script>
+  
+  <style>
+    pre {
+     white-space: pre-wrap;       /* css-3 */
+     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap;      /* Opera 4-6 */
+     white-space: -o-pre-wrap;    /* Opera 7 */
+     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+   }
+   preggg { 
+	margin: 15px; padding: 15px; 
+	color: #aaa; background-color: #e5e5e5;
+	white-space: pre; text-shadow: 0 0px 0 #000;
+	border-radius: 10px; border-bottom: 1px solid #555;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4) inset, 0 0 20px rgba(0,0,0,0.2) inset;
+	font: 16px/24px 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+        white-space: pre-wrap;       /* css-3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */                                                          >
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+   }
+  </style>
+</head>
+
+<body id="page-top">
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+        <div class="sidebar-brand-text mx-3">Free Rest APi's</div>
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Beranda</span></a>
+      </li>
+      <hr class="sidebar-divider">
+      <div class="sidebar-heading">
+        Features
+      </div>
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#tool"
+          aria-expanded="true" aria-controls="tool">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>TOOLS</span>
+        </a>
+        <div id="tool" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Base 64 & Base 32</h6>
+            <a class="collapse-item" href="/doc/base32">Base32 Encode Decode</a>
+            <a class="collapse-item" href="/doc/base64">Base64 Encode Decode</a>
+		    <h6 class="collapse-header">HASH Generator</h6>
+            <a class="collapse-item" href="/doc/hash/#sha1">SHA1 HASH</a>
+            <a class="collapse-item" href="/doc/hash/#sha256">SHA256 HASH</a>
+            <a class="collapse-item" href="/doc/hash/#sha512">SHA512 HASH</a>
+          </div>
+        </div>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#mager"
+          aria-expanded="true" aria-controls="mager">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>MAGER</span>
+        </a>
+        <div id="mager" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Online Tools ( APi's )</h6>
+            <a class="collapse-item" href="/doc/nulis">Nulis</a>
+            <a class="collapse-item" href="/doc/KBBI">KBBI</a>
+          </div>
+        </div>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#downloader"
+          aria-expanded="true" aria-controls="downloader">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>DOWNLOADER</span>
+        </a>
+        <div id="downloader" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Video Downloader</h6>
+            <a class="collapse-item" href="/doc/tiktok">Tiktok Downloader</a>
+			<a class="collapse-item" href="/doc/yt">Youtube Downloader</a>
+			<a class="collapse-item" href="/doc/ig">Instagram Downloader</a>
+          </div>
+        </div>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#finder"
+          aria-expanded="true" aria-controls="finder">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>FINDER</span>
+        </a>
+        <div id="finder" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Information Finder</h6>
+            <a class="collapse-item" href="/doc/lirik">Lyrics Finder</a>
+			<a class="collapse-item" href="/doc/covid19">Covid 19</a>
+			<a class="collapse-item" href="/doc/igs">Stalking Instagram</a>
+          </div>
+        </div>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#info"
+          aria-expanded="true" aria-controls="info">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>News</span>
+        </a>
+        <div id="info" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Info Finder</h6>
+            <a class="collapse-item" href="/doc/cuaca">Cuaca</a>
+			<a class="collapse-item" href="/doc/gempa">Gempa</a>
+          </div>
+        </div>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#inet"
+          aria-expanded="true" aria-controls="inet">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>Internet</span>
+        </a>
+        <div id="inet" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Internet Info</h6>
+            <a class="collapse-item" href="/doc/iplookup">IP Lookup</a>
+			<a class="collapse-item" href="/doc/proxy">Proxy Gen</a>
+			<a class="collapse-item" href="/doc/http">HTTP Headers</a>
+			<a class="collapse-item" href="/doc/userwp">User Wordpress</a>
+			<a class="collapse-item" href="/doc/hash_identifier">Hash Identifier</a>
+			<a class="collapse-item" href="/doc/crypto">Crypto Currency Today</a>
+          </div>
+        </div>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#movie"
+          aria-expanded="true" aria-controls="movie">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>Movie</span>
+        </a>
+        <div id="movie" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">FILM Finder</h6>
+            <a class="collapse-item" href="/doc/filmapik">Film Apik</a>
+          </div>
+        </div>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#game"
+          aria-expanded="true" aria-controls="game">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>Games</span>
+        </a>
+        <div id="game" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">TTS</h6>
+            <a class="collapse-item" href="/doc/ttscl">TTS Cak Lontong</a>
+			<h6 class="collapse-header">OtherGame</h6>
+			<a class="collapse-item" href="/doc/tebakgambar">Tebak Gambar</a>
+          </div>
+        </div>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#utils"
+          aria-expanded="true" aria-controls="utils">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>Utils</span>
+        </a>
+        <div id="utils" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Random API</h6>
+            <a class="collapse-item" href="/doc/fakename">Fake Name</a>
+			<a class="collapse-item" href="/doc/ushort">URL Shortner</a>
+			<a class="collapse-item" href="/doc/hilih">Hilih Generator</a>
+			<a class="collapse-item" href="/doc/spam_wa">Spam WhatsApp (NFP)</a>
+			<a class="collapse-item" href="/doc/dicoding">Dicoding Cheker</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">
+          <i class="fab fa-fw fa-wpforms"></i>
+          <span>About</span>
+        </a>
+      </li>
+      <hr class="sidebar-divider">
+    </ul>
+    <!-- Sidebar -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="JamNav" role="button" data-toggle="modal"
+                aria-haspopup="true" aria-expanded="false">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+                    id="#modalCenter"><span id="Jam">00:00:00</span></button>
+              </a>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <span class="badge badge-danger badge-counter">2</span>
+              </a>
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">November 15, 2020</div>
+                    Online APi's Tools is finishing
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-warning">
+                      <i class="fas fa-exclamation-triangle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">November 15, 2020</div>
+                    Report if there are errors on this website to Admin
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                <span class="badge badge-warning badge-counter">1</span>
+              </a>
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  Message Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="{{ host }}/admin/img/man.png" style="max-width: 60px" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div class="font-weight-bold">
+                    <div class="text-truncate">Happy Using Our API!.</div>
+                    <div class="small text-gray-500">Admin · 5m</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+              </div>
+            </li>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle" src="{{ host }}/admin/img/boy.png" style="max-width: 60px">
+                <span class="ml-2 d-none d-lg-inline text-white small">Guest</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- Topbar -->
+
+    {{{body}}}
+
+		<!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; <span id='year'>0000</span> - developed by
+              <b><a href="https://athallahdzaki.github.io">Athallah Dzaki</a></b>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer -->
+	  </div>
+	</div>
+  </div>
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top" style="display: none;">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <script src="/admin/vendor/jquery/jquery.min.js"></script>
+  <script src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="/admin/js/ruang-admin.js"></script>
+  <script src="/admin/vendor/chart.js/Chart.min.js"></script>
+  <script src="/admin/js/demo/chart-area-demo.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>"
+  <script async src="https://api.countapi.xyz/hit/freerestapi.herokuapp.com/visits?callback=visitors"></script>
+  <script async src="https://api.countapi.xyz/hit/freerestapi.herokuapp.com/apiusage?callback=apiusage"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Free Rest API",
+  "description": "Rest API for Free For Everyone",
+  "repository": "https://github.com/AthallahDzaki/freerestapi2",
+  "logo": "https://freerestapi.herokuapp.com/admin/img/logo/icon.ico",
+  "keywords": ["node", "express", "rest api", "free", "api"]
+}

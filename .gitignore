@@ -1,0 +1,6 @@
+# Directory module
+node_modules/
+debug/
+.env
+# lock file
+package-lock.json
