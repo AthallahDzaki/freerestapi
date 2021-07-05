@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 var cors = require('cors')
 if(!process.env.USING_HEROKU)
-	require('dotenv').config() // Disable Heroku .env for Privacy
+	require('dotenv').config() // Disable Heroku .env for Privacy On Github
 
 var indexRouter = require('./routes/index')
 var apiRouter   = require('./routes/api')
