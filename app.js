@@ -4,7 +4,8 @@ var path = require('path')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 var cors = require('cors')
-require('dotenv').config()
+if(!process.env.USEHEROKU)
+	require('dotenv').config() // Disable Heroku .env for Privacy
 
 var indexRouter = require('./routes/index')
 var apiRouter   = require('./routes/api')
@@ -29,6 +30,11 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.get('/api/v1/*', function (req, res, next) {
+	let nextred = req.originalUrl.replace('/v1/', '/');
+    res.redirect(307, 'https://freerestapi.herokuapp.com'+nextred);
+});
+
 app.use('/', indexRouter);
 app.use('/api/', apiRouter);
 
@@ -44,9 +50,8 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {}
   // render the error page
   res.status(err.status || 500)
-  //res.render('error')
-  res.send(err.message);
-  res.send(err);
+  let header = req.header('x-forwarded-proto');
+  res.render('error', {layout : false, host: (header ? req.header('x-forwarded-proto') + '://' : 'http://')+req.headers.host, error: err})
 })
 
 module.exports = app
