@@ -30,7 +30,7 @@
  ++++++++++++++++++++
  - Crypto Currency Info
  - Youtube Downloader (MP3 & MP4)
- - Instagram Downloader
+ - Instagram Downloader (Not Working VIA API SIte, Use Localhost)
  - Tiktok Downloader (NO WM)
  - NSFW Downloader
  - Info Cuaca
