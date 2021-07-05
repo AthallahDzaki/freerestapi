@@ -4,7 +4,7 @@ var path = require('path')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 var cors = require('cors')
-if(!process.env.USEHEROKU)
+if(!process.env.USING_HEROKU)
 	require('dotenv').config() // Disable Heroku .env for Privacy
 
 var indexRouter = require('./routes/index')
