@@ -8,8 +8,7 @@ const GetHostname = (req) => {
   let header = req.header('x-forwarded-proto');
   let result = process.env.USING_HEROKU == true ? 
     (header ? req.header('x-forwarded-proto') + '://' : 'http://')+req.get("host") : process.env.S_HOST
-  console.log(result);
-  return ;
+  return result;
 }
 
 let title = "Free Rest API | Online API's Tools";
