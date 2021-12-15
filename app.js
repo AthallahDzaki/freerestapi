@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/api/v1/*', function (req, res, next) {
 	let nextred = req.originalUrl.replace('/v1/', '/');
-    res.redirect(307, (process.env.USING_HEROKU == true ? "https://freerestapi.herokuapp.com" : process.env.HOST) + nextred);
+    res.redirect(307, (process.env.USING_HEROKU == true ? "https://freerestapi.herokuapp.com" : process.env.S_HOST) + nextred);
 });
 
 app.use('/', indexRouter);
@@ -52,7 +52,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500)
   let header = req.header('x-forwarded-proto');
-  res.render('error', {layout : false, host: (header ? req.header('x-forwarded-proto') + '://' : 'http://')+req.headers.host, error: err})
+  res.render('error', {layout : false, host: (process.env.USING_HEROKU == true ? "https://freerestapi.herokuapp.com" : process.env.S_HOST), error: err})
 })
 
 module.exports = app
