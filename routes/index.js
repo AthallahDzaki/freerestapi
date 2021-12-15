@@ -4,7 +4,8 @@ require('dotenv').config()
 
 const GetHostname = (req) => {
   let header = req.header('x-forwarded-proto');
-  let result = (header ? req.header('x-forwarded-proto') + '://' : 'http://')+req.get("hostname")
+  let result = process.env.USING_HEROKU == true ? 
+    (header ? req.header('x-forwarded-proto') + '://' : 'http://')+req.get("hostname") : process.env.HOST
   console.log(result);
   return ;
 }

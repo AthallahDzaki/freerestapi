@@ -4,7 +4,7 @@ var path = require('path')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 var cors = require('cors')
-if(!process.env.USING_HEROKU)
+if(process.env.USING_HEROKU == false)
 	require('dotenv').config() // Disable Heroku .env for Privacy On Github
 
 var indexRouter = require('./routes/index')
@@ -30,9 +30,10 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
+
 app.get('/api/v1/*', function (req, res, next) {
 	let nextred = req.originalUrl.replace('/v1/', '/');
-    res.redirect(307, 'https://freerestapi.herokuapp.com'+nextred);
+    res.redirect(307, (process.env.USING_HEROKU == true ? "https://freerestapi.herokuapp.com" : process.env.HOST) + nextred);
 });
 
 app.use('/', indexRouter);
