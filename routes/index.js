@@ -2,10 +2,12 @@ const express = require('express')
 const router = express.Router()
 require('dotenv').config()
 
+console.log(prcoess.env);
+
 const GetHostname = (req) => {
   let header = req.header('x-forwarded-proto');
   let result = process.env.USING_HEROKU == true ? 
-    (header ? req.header('x-forwarded-proto') + '://' : 'http://')+req.get("hostname") : process.env.HOST
+    (header ? req.header('x-forwarded-proto') + '://' : 'http://')+req.get("host") : process.env.HOST
   console.log(result);
   return ;
 }
