@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 require('dotenv').config()
 
-console.log(prcoess.env);
+console.log(process.env);
 
 const GetHostname = (req) => {
   let header = req.header('x-forwarded-proto');
