@@ -11,6 +11,7 @@
     "axios": "^0.21.0",
     "base-64": "^1.0.0",
     "base32": "0.0.6",
+    "brainly-scraper-v2": "^2.0.4-1",
     "cheerio": "^1.0.0-rc.3",
     "child_process": "^1.0.2",
     "cookie-parser": "~1.4.4",
@@ -22,7 +23,7 @@
     "express": "~4.17.1",
     "express-rate-limit": "^5.0.0",
     "faker": "^5.5.3",
-    "file-type": "^16.0.1",
+    "file-type": "^17.0.1",
     "form-data": "^4.0.0",
     "generate-password": "^1.4.2",
     "genius-lyrics": "^4.0.0",
@@ -50,7 +51,6 @@
     "yt-search": "^2.9.0",
     "ytdl-core": "^4.8.3"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AthallahDzaki/freerestapi"
