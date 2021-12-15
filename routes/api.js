@@ -38,7 +38,8 @@ const {
 	FilmApik,
 	ytDownlodMp3,
 	ytDownlodMp4,
-	Crypto
+	Crypto,
+	Brainly
 } = require('./../lib')
 
 function IncreaseCount(){
@@ -715,6 +716,22 @@ router.get('/crypto', (req, res) => {
 			.catch(err => {
 				res.send(err);
 			})
+})
+
+router.get('/brainly', (req, res) => {
+	const question = req.query.question;
+	if(!question || question == undefined)
+	return res.send({
+        code: 400,
+        message: 'input parameter question.'
+    })
+	Brainly(question)
+					.then(data => {
+						res.send(data);
+					})
+					.catch(err => {
+						res.send(err);
+					})
 })
 
 module.exports = router
