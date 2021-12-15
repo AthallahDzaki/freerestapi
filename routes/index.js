@@ -4,7 +4,9 @@ require('dotenv').config()
 
 const GetHostname = (req) => {
   let header = req.header('x-forwarded-proto');
-  return (header ? req.header('x-forwarded-proto') + '://' : 'http://')+req.get("hostname");
+  let result = (header ? req.header('x-forwarded-proto') + '://' : 'http://')+req.get("hostname")
+  console.log(result);
+  return ;
 }
 
 let title = "Free Rest API | Online API's Tools";
