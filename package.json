@@ -38,7 +38,7 @@
     "minimist": "^1.2.5",
     "moment-timezone": "^0.5.32",
     "morgan": "~1.10.0",
-    "needle": "^2.4.0",
+    "needle": "^3.1.0",
     "nhentai": "^3.0.0",
     "node-fetch": "^2.6.1",
     "node-scrapy": "^0.5.0",
