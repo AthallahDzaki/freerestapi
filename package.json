@@ -23,7 +23,7 @@
     "express": "~4.17.1",
     "express-rate-limit": "^5.0.0",
     "faker": "^5.5.3",
-    "file-type": "^16.0.1",
+    "file-type": "^17.1.6",
     "form-data": "^4.0.0",
     "generate-password": "^1.4.2",
     "genius-lyrics": "^4.0.0",
